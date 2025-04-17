@@ -11,6 +11,159 @@ conf/ours_doc_id_begin.yaml与conf\templates\train_config.yaml
 
 conf\templates\train_config.yaml为默认的训练参数配置，没有在conf/ours_doc_id_begin.yaml中提及的参数配置默认使用train_config.yaml中的参数
 
+```yaml
+# Pretrain a gpt2 style model
+text_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain
+streaming: outputs/experiments/arxiv-citation-doc-id-end/data/streaming/
+tokenizer_name: ${streaming}/tokenizer
+max_seq_len: 1024  # 根据模型和数据集调整
+global_seed: 17
+url_trie: ${streaming}/url_trie.pkl
+ood_url_trie: ${streaming}/unseen_url_trie.pkl
+
+# Run Name
+run_name: arxiv-citation-doc-id-end
+cross_doc_attention: false
+
+# Model
+model:
+  name: hf_causal_lm
+  pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+  pretrained: true 
+  loss:
+    type: mask  # 与配置文件中的 loss_type 对应
+    url_loss_factor: 1.0
+  
+
+  
+  ckpt_dir: outputs/experiments/arxiv-citation-doc-id-end/checkpoints
+  # checkpoint: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints/latest"  # 或者特定的检查点路径（这里可以在间断点上进行断点训练）
+    
+# Tokenizer 部分保持不变
+# Tokenizer
+tokenizer:
+  name: ${tokenizer_name}
+  kwargs:
+    model_max_length: ${max_seq_len}
+
+
+# Dataloaders
+dataloaders:
+  - name: train_loader_docs
+    dataset:
+      local: ${streaming}
+      split: train
+      shuffle: true
+      max_seq_len: ${max_seq_len}
+      batch_type: lm
+      masking:
+        cross_doc_attention: ${cross_doc_attention}
+    drop_last: false
+    num_workers: 0
+  
+  # 评估数据加载器部分
+  - name: in_domain_standard_q_answer_eval_loader
+    dataset:
+      path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/qa
+      split: qa_train
+      shuffle: false
+      max_seq_len: ${max_seq_len}
+      batch_type: qa
+    drop_last: false
+    num_workers: 0
+
+  - name: out_of_domain_standard_q_answer_eval_loader
+    dataset:
+      path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/qa
+      split: qa_train
+      shuffle: false
+      max_seq_len: ${max_seq_len}
+      batch_type: qa-ood 
+    drop_last: false
+    num_workers: 0
+
+# 其他部分保持不变
+# Optimization
+scheduler:
+  name: linear_decay_with_warmup
+  t_warmup: 1ep
+  alpha_f: 0.1
+
+optimizer:
+  name: deepspeed_adam
+  lr: 1.0e-4
+  betas:
+  - 0.9
+  - 0.98
+  eps: 1.0e-06
+  weight_decay: 0.0
+
+algorithms:
+  gradient_clipping:
+    clipping_type: norm
+    clipping_threshold: 1.0
+
+max_duration: 10ep # 
+eval_interval: 3ep
+eval_first: false
+eval_subset_num_batches: -1
+global_train_batch_size: 64 #修改，原来为 128
+
+# System 
+seed: ${global_seed}
+device_eval_batch_size: 64      # 评估批次
+device_train_microbatch_size: 4  # 每次训练送入8个样本
+
+# device_train_microbatch_size: auto
+precision: amp_bf16
+
+deepspeed_config:
+  bf16:
+    enabled: true
+  train_batch_size: ${global_train_batch_size}
+  zero_optimization:
+    stage: 3  
+    contiguous_gradients: true
+    reduce_bucket_size: true
+    overlap_comm: true
+    allgather_bucket_size: 2e8
+    reduce_scatter: true
+    offload_optimizer:
+      device: cpu
+      pin_memory: true
+    
+    # stage: 2  
+    # contiguous_gradients: true
+    # reduce_bucket_size: 2e8
+    # overlap_comm: true
+    # allgather_partitions: true
+    # allgather_bucket_size: 2e8
+    # reduce_scatter: true
+    # cpu_offload: true
+
+
+# Logging
+progress_bar: false
+log_to_console: true
+console_log_interval: 50ba
+
+callbacks:
+  speed_monitor:
+    window_size: 10
+  lr_monitor: {}
+  memory_monitor: {}
+  runtime_estimator: {}
+
+loggers:
+   wandb: 
+    project: intrinsic-source-citation
+
+# Checkpoint to local filesystem or remote object store
+save_interval: 1ep
+save_num_checkpoints_to_keep: 1 
+save_folder: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints"  #在此可以保留模型训练的checkpoints
+···
+
 参数若在conf/ours_doc_id_begin.yaml中有定义，则使用conf/ours_doc_id_begin.yaml的配置
 
 ```yaml
