@@ -162,7 +162,8 @@ loggers:
 save_interval: 1ep
 save_num_checkpoints_to_keep: 1 
 save_folder: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints"  #在此可以保留模型训练的checkpoints
-···
+```
+
 
 参数若在conf/ours_doc_id_begin.yaml中有定义，则使用conf/ours_doc_id_begin.yaml的配置
 
