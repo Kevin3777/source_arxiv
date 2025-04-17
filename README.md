@@ -1,3 +1,88 @@
+# 运行代码
+```python
+source /etc/network_turbo
+python run_experiment.py conf/ours_doc_id_begin.yaml
+```
+替换conf/ours_doc_id_begin.yaml即可
+
+配置文件分为两个部分：
+
+conf/ours_doc_id_begin.yaml与conf\templates\train_config.yaml
+
+conf\templates\train_config.yaml为默认的训练参数配置，没有在conf/ours_doc_id_begin.yaml中提及的参数配置默认使用train_config.yaml中的参数
+
+参数若在conf/ours_doc_id_begin.yaml中有定义，则使用conf/ours_doc_id_begin.yaml的配置
+
+```yaml
+# Experiment Configuration
+
+experiment:
+  name: arxiv-citation-doc-id-begin
+  output_dir: outputs/experiments/
+
+data:
+  text_data_path: dataset/ours/pretrain  # 指向预训练数据集目录
+  train_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain/train
+  qa_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours
+  augment:
+    doc:
+      do: false
+      method: permute
+      n_sample_per_doc: 2
+  finetune:
+    number_non_attributable_negatives: 0
+    neg_create_probability: 0.0
+
+model:
+  name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+
+train:
+  url_location: first  # URL 位置在文档开头
+  pretrain: true
+  sequential: false
+  finetune_q_url_a: false
+  repeat_url_across_doc: false
+  finetune_q_a_url: true
+  finetune_q_a: false
+  finetune_q_a_doc_url: false
+  q_a_url_predict_url_only: false
+  
+  # 损失和注意力配置
+  cross_doc_attention: false
+  url_loss_factor: 1.0
+  loss_type: mask
+  config_template_path: conf/templates/train_config.yaml
+  
+  # 训练参数
+  device_eval_batch_size: 40
+  device_train_microbatch_size: 2
+  eval_first: false
+  weight_decay: 0.02
+  lr: 8.0e-5
+  max_duration: 10ep
+  save_folder: "outputs/experiments/arxiv-citation-doc-id-begin/checkpoints" #在此可以保留模型训练的checkpoints
+
+eval:  
+  disable_qa_eval: false
+  disable_all_eval: false
+  disable_attribution_eval: false
+  disable_non_attrib_eval: true
+  icl_eval: false
+  ppl_eval: false
+  use_ais: false
+```
+
+conf/ours_doc_id_begin.yaml训练评估结果：
+![alt text](pictures/begin训练参数.png)
+![alt text](pictures/begin评估.png)
+
+conf/ours_doc_id_end.yaml训练评估结果：
+![alt text](pictures/end训练参数.png)
+![alt text](pictures/end评估.png)
+
+
+
+
 # Source-Aware Training Enables Knowledge Attribution in Language Models
 
 We explore **Source-aware Training** to enable LLMs to cite their pretraining data. Source-aware training involves (i) training the LLM to associate unique source document identifiers with the knowledge in each document, followed by (ii) an instruction-tuning to teach the LLM to cite a supporting pretraining source when prompted. We demonstrate that our training recipe can enable faithful attribution to the pretraining data without a substantial impact on the model's quality compared to standard pretraining. Our results also highlight the importance of data augmentation in achieving attribution.
