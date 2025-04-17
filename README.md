@@ -29,7 +29,7 @@ cross_doc_attention: false
 model:
   name: hf_causal_lm
   pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
-  pretrained: true 
+  pretrained: true  # 决定是否进行预训练，预训练耗时不长，两三分钟，可以不修改
   loss:
     type: mask  # 与配置文件中的 loss_type 对应
     url_loss_factor: 1.0
@@ -191,7 +191,7 @@ model:
 
 train:
   url_location: first  # URL 位置在文档开头
-  pretrain: true
+  pretrain: true  # 决定是否进行预训练，预训练耗时不长，两三分钟，可以不修改
   sequential: false
   finetune_q_url_a: false
   repeat_url_across_doc: false
