@@ -3,7 +3,7 @@
 source /etc/network_turbo
 python run_experiment.py conf/ours_doc_id_begin.yaml
 ```
-替换conf/ours_doc_id_begin.yaml即可
+替换conf/ours_doc_id_begin.yaml即可（如conf/ours_doc_id_end.yaml）
 
 配置文件分为两个部分：
 
@@ -81,8 +81,10 @@ conf/ours_doc_id_end.yaml训练评估结果：
 ![alt text](pictures/end评估.png)
 
 模型checkpoints（只训练5/6词epoch，建议重新训练即可）：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
+
 预处理好的数据集：链接同上
-数据集的结构：
+
+数据集的结构（只需关注ours即可）：
 ![alt text](pictures/dataset.png)
 
 
