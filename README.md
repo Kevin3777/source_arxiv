@@ -1,4 +1,8 @@
 # 运行代码
+在autodl已经配置好了环境，并且做了代码适配，环境比较麻烦，修改代码前可以先备份：西北B区 / 710机，西北B区 / 274机。
+
+以下的配置文件显存占用为28GB左右，要加快训练速度要换更好的机器。
+
 ```python
 source /etc/network_turbo
 python run_experiment.py conf/ours_doc_id_begin.yaml
