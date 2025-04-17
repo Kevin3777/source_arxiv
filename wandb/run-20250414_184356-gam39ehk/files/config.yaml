@@ -1,0 +1,296 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.10
+    cli_version: 0.15.12
+    framework: huggingface
+    huggingface_version: 4.34.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1744627436.797769
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      - 66
+      - 71
+      2:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      - 66
+      - 71
+      3:
+      - 2
+      - 13
+      - 23
+      4: 3.8.10
+      5: 0.15.12
+      6: 4.34.1
+      8:
+      - 5
+      13: linux-x86_64
+num_nodes:
+  desc: null
+  value: 1
+num_gpus_per_node:
+  desc: null
+  value: 1
+node_name:
+  desc: null
+  value: unknown because NODENAME environment variable not set
+rank_zero_seed:
+  desc: null
+  value: 17
+algorithms:
+  desc: null
+  value:
+    gradient_clipping:
+      clipping_threshold: 1.0
+      clipping_type: norm
+callbacks:
+  desc: null
+  value:
+    lr_monitor: {}
+    memory_monitor: {}
+    runtime_estimator: {}
+    speed_monitor:
+      window_size: 10
+console_log_interval:
+  desc: null
+  value: 50ba
+cross_doc_attention:
+  desc: null
+  value: false
+dataloaders:
+  desc: null
+  value:
+  - dataset:
+      batch_type: lm
+      local: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming/
+      max_seq_len: 2048
+      shuffle: true
+      split: train
+    drop_last: false
+    name: train_loader_docs
+    num_workers: 0
+  - dataset:
+      max_seq_len: 2048
+      path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/qa
+      split: qa_train
+    drop_last: false
+    name: in_domain_standard_q_answer_eval_loader
+    num_workers: 0
+  - dataset:
+      max_seq_len: 2048
+      path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/qa
+      split: qa_train
+    drop_last: false
+    name: out_of_domain_standard_q_answer_eval_loader
+    num_workers: 0
+  - dataset:
+      batch_type: fact
+      local: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming/qa
+      masking:
+        cross_doc_attention: false
+      max_seq_len: 2048
+      shuffle: true
+      split: qa_attribution_train
+    drop_last: false
+    name: train_q_a_url
+    num_workers: 0
+deepspeed_config:
+  desc: null
+  value:
+    bf16:
+      enabled: true
+    train_batch_size: 80
+    zero_optimization:
+      allgather_bucket_size: 200000000.0
+      contiguous_gradients: true
+      offload_optimizer:
+        device: cpu
+        pin_memory: true
+      overlap_comm: true
+      reduce_bucket_size: true
+      reduce_scatter: true
+      stage: 3
+device_eval_batch_size:
+  desc: null
+  value: 40
+device_train_microbatch_size:
+  desc: null
+  value: 2
+eval_first:
+  desc: null
+  value: false
+eval_interval:
+  desc: null
+  value: 1ep
+eval_subset_num_batches:
+  desc: null
+  value: -1
+experiment:
+  desc: null
+  value:
+    data:
+      augment:
+        doc:
+          do: false
+          method: permute
+          n_sample_per_doc: 2
+      finetune:
+        neg_create_probability: 0.0
+        number_non_attributable_negatives: 0
+      qa_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours
+      text_data_path: dataset/ours/pretrain
+      train_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain/train
+    eval:
+      disable_all_eval: false
+      disable_attribution_eval: false
+      disable_non_attrib_eval: true
+      disable_qa_eval: false
+      icl_eval: false
+      ppl_eval: false
+      use_ais: false
+    experiment:
+      name: arxiv-citation-doc-id-begin
+      output_dir: outputs/experiments/
+    model:
+      name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+    train:
+      config_template_path: conf/templates/train_config.yaml
+      cross_doc_attention: false
+      device_eval_batch_size: 40
+      device_train_microbatch_size: 2
+      eval_first: false
+      finetune_q_a: false
+      finetune_q_a_doc_url: false
+      finetune_q_a_url: true
+      finetune_q_url_a: false
+      loss_type: mask
+      lr: 8.0e-05
+      max_duration: 10ep
+      pretrain: true
+      q_a_url_predict_url_only: false
+      repeat_url_across_doc: false
+      save_folder: null
+      sequential: false
+      url_location: first
+      url_loss_factor: 1.0
+      weight_decay: 0.02
+global_seed:
+  desc: null
+  value: 17
+global_train_batch_size:
+  desc: null
+  value: 80
+log_to_console:
+  desc: null
+  value: true
+loggers:
+  desc: null
+  value:
+    wandb:
+      project: intrinsic-source-citation
+max_duration:
+  desc: null
+  value: 10ep
+max_seq_len:
+  desc: null
+  value: 2048
+model:
+  desc: null
+  value:
+    checkpoint: null
+    loss:
+      type: mask
+      url_loss_factor: 1.0
+    name: hf_causal_lm
+    pretrained: true
+    pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+ood_url_trie:
+  desc: null
+  value: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming/unseen_url_trie.pkl
+optimizer:
+  desc: null
+  value:
+    betas:
+    - 0.9
+    - 0.98
+    eps: 1.0e-06
+    lr: 8.0e-05
+    name: deepspeed_adam
+    weight_decay: 0.02
+precision:
+  desc: null
+  value: amp_bf16
+progress_bar:
+  desc: null
+  value: false
+run_name:
+  desc: null
+  value: arxiv-citation-doc-id-begin
+save_folder:
+  desc: null
+  value: null
+save_interval:
+  desc: null
+  value: 1ep
+save_num_checkpoints_to_keep:
+  desc: null
+  value: 1
+scheduler:
+  desc: null
+  value:
+    alpha_f: 0.1
+    name: linear_decay_with_warmup
+    t_warmup: 1ep
+seed:
+  desc: null
+  value: 17
+streaming:
+  desc: null
+  value: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming/
+text_data_path:
+  desc: null
+  value: dataset/ours/pretrain
+tokenizer:
+  desc: null
+  value:
+    kwargs:
+      model_max_length: 2048
+    name: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming//tokenizer
+tokenizer_name:
+  desc: null
+  value: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming//tokenizer
+url_trie:
+  desc: null
+  value: outputs/experiments/arxiv-citation-doc-id-begin/data/streaming/url_trie.pkl
+dist_timeout:
+  desc: null
+  value: 600.0
+n_gpus:
+  desc: null
+  value: 1
+device_train_batch_size:
+  desc: null
+  value: 80
+device_train_grad_accum:
+  desc: null
+  value: 40
+n_params:
+  desc: null
+  value: 1100056576
+enabled_algorithms/GradientClipping:
+  desc: null
+  value: true

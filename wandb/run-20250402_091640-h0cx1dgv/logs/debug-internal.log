@@ -1,0 +1,434 @@
+2025-04-02 09:16:40,238 INFO    StreamThr :1319 [internal.py:wandb_internal():86] W&B internal server running at pid: 1319, started at: 2025-04-02 09:16:40.236496
+2025-04-02 09:16:40,242 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status
+2025-04-02 09:16:40,246 INFO    WriterThread:1319 [datastore.py:open_for_write():85] open: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/run-h0cx1dgv.wandb
+2025-04-02 09:16:40,252 DEBUG   SenderThread:1319 [sender.py:send():380] send: header
+2025-04-02 09:16:40,252 DEBUG   SenderThread:1319 [sender.py:send():380] send: run
+2025-04-02 09:16:41,635 INFO    SenderThread:1319 [dir_watcher.py:__init__():211] watching files in: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files
+2025-04-02 09:16:41,635 INFO    SenderThread:1319 [sender.py:_start_run_threads():1122] run started: h0cx1dgv with start time 1743556600.234563
+2025-04-02 09:16:41,646 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: check_version
+2025-04-02 09:16:41,647 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: check_version
+2025-04-02 09:16:42,854 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: run_start
+2025-04-02 09:16:42,904 DEBUG   HandlerThread:1319 [system_info.py:__init__():32] System info init
+2025-04-02 09:16:42,904 DEBUG   HandlerThread:1319 [system_info.py:__init__():47] System info init done
+2025-04-02 09:16:42,904 INFO    HandlerThread:1319 [system_monitor.py:start():194] Starting system monitor
+2025-04-02 09:16:42,904 INFO    SystemMonitor:1319 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-02 09:16:42,904 INFO    HandlerThread:1319 [system_monitor.py:probe():214] Collecting system info
+2025-04-02 09:16:42,906 INFO    SystemMonitor:1319 [interfaces.py:start():190] Started cpu monitoring
+2025-04-02 09:16:42,910 INFO    SystemMonitor:1319 [interfaces.py:start():190] Started disk monitoring
+2025-04-02 09:16:42,918 INFO    SystemMonitor:1319 [interfaces.py:start():190] Started gpu monitoring
+2025-04-02 09:16:42,923 INFO    SystemMonitor:1319 [interfaces.py:start():190] Started memory monitoring
+2025-04-02 09:16:42,926 INFO    SystemMonitor:1319 [interfaces.py:start():190] Started network monitoring
+2025-04-02 09:16:43,021 DEBUG   HandlerThread:1319 [system_info.py:probe():196] Probing system
+2025-04-02 09:16:43,032 DEBUG   HandlerThread:1319 [gitlib.py:_init_repo():53] git repository is invalid
+2025-04-02 09:16:43,032 DEBUG   HandlerThread:1319 [system_info.py:probe():244] Probing system done
+2025-04-02 09:16:43,032 DEBUG   HandlerThread:1319 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-155-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2025-04-02T01:16:43.021578', 'startedAt': '2025-04-02T01:16:40.222973', 'docker': None, 'cuda': None, 'args': ('outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/train_config.yaml',), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'autodl-container-11d445a847-7722b670', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 889.3553281249998, 'min': 800.0, 'max': 2001.0}, 'cpu_freq_per_core': [{'current': 894.83, 'min': 800.0, 'max': 2001.0}, {'current': 833.189, 'min': 800.0, 'max': 2001.0}, {'current': 879.059, 'min': 800.0, 'max': 2001.0}, {'current': 830.567, 'min': 800.0, 'max': 2001.0}, {'current': 931.227, 'min': 800.0, 'max': 2001.0}, {'current': 905.574, 'min': 800.0, 'max': 2001.0}, {'current': 800.838, 'min': 800.0, 'max': 2001.0}, {'current': 800.847, 'min': 800.0, 'max': 2001.0}, {'current': 847.209, 'min': 800.0, 'max': 2001.0}, {'current': 948.334, 'min': 800.0, 'max': 2001.0}, {'current': 800.376, 'min': 800.0, 'max': 2001.0}, {'current': 800.83, 'min': 800.0, 'max': 2001.0}, {'current': 880.002, 'min': 800.0, 'max': 2001.0}, {'current': 839.377, 'min': 800.0, 'max': 2001.0}, {'current': 800.829, 'min': 800.0, 'max': 2001.0}, {'current': 800.042, 'min': 800.0, 'max': 2001.0}, {'current': 932.057, 'min': 800.0, 'max': 2001.0}, {'current': 801.237, 'min': 800.0, 'max': 2001.0}, {'current': 892.707, 'min': 800.0, 'max': 2001.0}, {'current': 800.835, 'min': 800.0, 'max': 2001.0}, {'current': 800.82, 'min': 800.0, 'max': 2001.0}, {'current': 800.852, 'min': 800.0, 'max': 2001.0}, {'current': 800.416, 'min': 800.0, 'max': 2001.0}, {'current': 800.428, 'min': 800.0, 'max': 2001.0}, {'current': 800.836, 'min': 800.0, 'max': 2001.0}, {'current': 800.82, 'min': 800.0, 'max': 2001.0}, {'current': 800.426, 'min': 800.0, 'max': 2001.0}, {'current': 801.269, 'min': 800.0, 'max': 2001.0}, {'current': 800.297, 'min': 800.0, 'max': 2001.0}, {'current': 801.203, 'min': 800.0, 'max': 2001.0}, {'current': 800.824, 'min': 800.0, 'max': 2001.0}, {'current': 817.607, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 800.236, 'min': 800.0, 'max': 2001.0}, {'current': 800.188, 'min': 800.0, 'max': 2001.0}, {'current': 801.588, 'min': 800.0, 'max': 2001.0}, {'current': 800.214, 'min': 800.0, 'max': 2001.0}, {'current': 800.756, 'min': 800.0, 'max': 2001.0}, {'current': 800.768, 'min': 800.0, 'max': 2001.0}, {'current': 800.269, 'min': 800.0, 'max': 2001.0}, {'current': 857.508, 'min': 800.0, 'max': 2001.0}, {'current': 800.059, 'min': 800.0, 'max': 2001.0}, {'current': 800.161, 'min': 800.0, 'max': 2001.0}, {'current': 800.208, 'min': 800.0, 'max': 2001.0}, {'current': 800.153, 'min': 800.0, 'max': 2001.0}, {'current': 862.94, 'min': 800.0, 'max': 2001.0}, {'current': 812.477, 'min': 800.0, 'max': 2001.0}, {'current': 800.21, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 866.326, 'min': 800.0, 'max': 2001.0}, {'current': 811.426, 'min': 800.0, 'max': 2001.0}, {'current': 800.308, 'min': 800.0, 'max': 2001.0}, {'current': 800.078, 'min': 800.0, 'max': 2001.0}, {'current': 800.21, 'min': 800.0, 'max': 2001.0}, {'current': 801.2, 'min': 800.0, 'max': 2001.0}, {'current': 800.212, 'min': 800.0, 'max': 2001.0}, {'current': 800.129, 'min': 800.0, 'max': 2001.0}, {'current': 800.779, 'min': 800.0, 'max': 2001.0}, {'current': 800.793, 'min': 800.0, 'max': 2001.0}, {'current': 800.791, 'min': 800.0, 'max': 2001.0}, {'current': 800.206, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 842.745, 'min': 800.0, 'max': 2001.0}, {'current': 932.113, 'min': 800.0, 'max': 2001.0}, {'current': 885.997, 'min': 800.0, 'max': 2001.0}, {'current': 855.013, 'min': 800.0, 'max': 2001.0}, {'current': 880.143, 'min': 800.0, 'max': 2001.0}, {'current': 801.69, 'min': 800.0, 'max': 2001.0}, {'current': 905.712, 'min': 800.0, 'max': 2001.0}, {'current': 800.839, 'min': 800.0, 'max': 2001.0}, {'current': 801.279, 'min': 800.0, 'max': 2001.0}, {'current': 800.105, 'min': 800.0, 'max': 2001.0}, {'current': 801.264, 'min': 800.0, 'max': 2001.0}, {'current': 801.296, 'min': 800.0, 'max': 2001.0}, {'current': 800.285, 'min': 800.0, 'max': 2001.0}, {'current': 831.402, 'min': 800.0, 'max': 2001.0}, {'current': 891.365, 'min': 800.0, 'max': 2001.0}, {'current': 875.872, 'min': 800.0, 'max': 2001.0}, {'current': 831.917, 'min': 800.0, 'max': 2001.0}, {'current': 844.51, 'min': 800.0, 'max': 2001.0}, {'current': 854.566, 'min': 800.0, 'max': 2001.0}, {'current': 800.416, 'min': 800.0, 'max': 2001.0}, {'current': 800.825, 'min': 800.0, 'max': 2001.0}, {'current': 800.845, 'min': 800.0, 'max': 2001.0}, {'current': 800.414, 'min': 800.0, 'max': 2001.0}, {'current': 800.853, 'min': 800.0, 'max': 2001.0}, {'current': 800.213, 'min': 800.0, 'max': 2001.0}, {'current': 800.863, 'min': 800.0, 'max': 2001.0}, {'current': 800.185, 'min': 800.0, 'max': 2001.0}, {'current': 800.217, 'min': 800.0, 'max': 2001.0}, {'current': 800.429, 'min': 800.0, 'max': 2001.0}, {'current': 800.837, 'min': 800.0, 'max': 2001.0}, {'current': 949.421, 'min': 800.0, 'max': 2001.0}, {'current': 800.843, 'min': 800.0, 'max': 2001.0}, {'current': 800.823, 'min': 800.0, 'max': 2001.0}, {'current': 800.225, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 800.14, 'min': 800.0, 'max': 2001.0}, {'current': 800.815, 'min': 800.0, 'max': 2001.0}, {'current': 800.415, 'min': 800.0, 'max': 2001.0}, {'current': 800.203, 'min': 800.0, 'max': 2001.0}, {'current': 801.163, 'min': 800.0, 'max': 2001.0}, {'current': 800.167, 'min': 800.0, 'max': 2001.0}, {'current': 800.222, 'min': 800.0, 'max': 2001.0}, {'current': 800.089, 'min': 800.0, 'max': 2001.0}, {'current': 800.408, 'min': 800.0, 'max': 2001.0}, {'current': 800.382, 'min': 800.0, 'max': 2001.0}, {'current': 800.785, 'min': 800.0, 'max': 2001.0}, {'current': 800.801, 'min': 800.0, 'max': 2001.0}, {'current': 848.992, 'min': 800.0, 'max': 2001.0}, {'current': 800.762, 'min': 800.0, 'max': 2001.0}, {'current': 800.284, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 802.994, 'min': 800.0, 'max': 2001.0}, {'current': 867.234, 'min': 800.0, 'max': 2001.0}, {'current': 801.183, 'min': 800.0, 'max': 2001.0}, {'current': 800.764, 'min': 800.0, 'max': 2001.0}, {'current': 801.6, 'min': 800.0, 'max': 2001.0}, {'current': 800.811, 'min': 800.0, 'max': 2001.0}, {'current': 800.221, 'min': 800.0, 'max': 2001.0}, {'current': 800.807, 'min': 800.0, 'max': 2001.0}, {'current': 801.189, 'min': 800.0, 'max': 2001.0}, {'current': 800.81, 'min': 800.0, 'max': 2001.0}, {'current': 800.153, 'min': 800.0, 'max': 2001.0}, {'current': 800.17, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 840.319, 'min': 800.0, 'max': 2001.0}, {'current': 800.203, 'min': 800.0, 'max': 2001.0}], 'disk': {'/': {'total': 30.0, 'used': 9.731365203857422}}, 'gpu': 'NVIDIA vGPU-32GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA vGPU-32GB', 'memory_total': 34351349760}], 'memory': {'total': 1007.5241508483887}}
+2025-04-02 09:16:43,032 INFO    HandlerThread:1319 [system_monitor.py:probe():224] Finished collecting system info
+2025-04-02 09:16:43,032 INFO    HandlerThread:1319 [system_monitor.py:probe():227] Publishing system info
+2025-04-02 09:16:43,032 DEBUG   HandlerThread:1319 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-04-02 09:16:43,033 DEBUG   HandlerThread:1319 [system_info.py:_save_pip():68] Saving pip packages done
+2025-04-02 09:16:43,033 DEBUG   HandlerThread:1319 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-04-02 09:16:43,642 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/requirements.txt
+2025-04-02 09:16:43,643 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/conda-environment.yaml
+2025-04-02 09:17:00,415 DEBUG   HandlerThread:1319 [system_info.py:_save_conda():87] Saving conda packages done
+2025-04-02 09:17:00,420 INFO    HandlerThread:1319 [system_monitor.py:probe():229] Finished publishing system info
+2025-04-02 09:17:00,432 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:00,432 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-02 09:17:00,432 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:00,433 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-02 09:17:00,433 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:00,433 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-02 09:17:00,434 DEBUG   SenderThread:1319 [sender.py:send():380] send: files
+2025-04-02 09:17:00,435 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2025-04-02 09:17:00,449 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:17:00,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:17:00,457 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:17:00,645 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/conda-environment.yaml
+2025-04-02 09:17:00,645 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-metadata.json
+2025-04-02 09:17:01,347 DEBUG   SenderThread:1319 [sender.py:send():380] send: telemetry
+2025-04-02 09:17:01,347 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:01,350 DEBUG   SenderThread:1319 [sender.py:send():380] send: config
+2025-04-02 09:17:01,350 DEBUG   SenderThread:1319 [sender.py:send():380] send: config
+2025-04-02 09:17:01,645 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:03,284 INFO    wandb-upload_0:1319 [upload_job.py:push():131] Uploaded file /tmp/tmp2ugnnpe6wandb/wxkj7er7-wandb-metadata.json
+2025-04-02 09:17:03,647 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:05,648 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:06,855 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:09,651 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:12,162 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:12,653 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/config.yaml
+2025-04-02 09:17:13,654 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:15,273 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:15,277 DEBUG   SenderThread:1319 [sender.py:send():380] send: config
+2025-04-02 09:17:15,278 DEBUG   SenderThread:1319 [sender.py:send():380] send: config
+2025-04-02 09:17:15,454 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:17:15,455 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:17:15,465 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:17:16,558 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:16,558 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:16,559 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:17,656 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:17,844 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:22,845 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:27,846 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:30,449 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:17:30,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:17:30,457 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:17:32,865 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:37,866 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:42,487 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,531 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,532 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,532 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,532 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,537 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:42,538 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:17:42,540 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:17:42,545 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:17:42,668 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:17:42,928 DEBUG   SystemMonitor:1319 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-02 09:17:42,934 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:17:42,942 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:43,611 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:43,611 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:43,612 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:17:43,669 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:17:43,670 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/config.yaml
+2025-04-02 09:17:45,449 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:17:45,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:17:45,457 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:17:48,874 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:53,875 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:17:58,876 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:00,450 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:18:00,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:18:00,459 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:18:04,772 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:09,525 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,526 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,526 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,528 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,528 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,530 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,532 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:09,532 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:18:09,533 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:18:09,539 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:18:09,683 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:18:10,540 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:10,828 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:10,829 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:10,829 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:12,940 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:18:15,450 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:18:15,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:18:15,457 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:18:15,791 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:20,792 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:25,793 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:30,450 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:18:30,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:18:30,491 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:18:30,826 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:35,827 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:35,878 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,879 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,879 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,880 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,881 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,883 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,885 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:18:35,885 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:18:35,892 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:35,893 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:18:36,698 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:18:37,052 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:37,053 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:37,053 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:18:40,894 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:42,946 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:18:45,450 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:18:45,451 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:18:45,457 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:18:46,875 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:51,876 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:18:56,877 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:00,793 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:19:00,793 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:19:00,794 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:19:01,338 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,379 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,379 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,380 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,380 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,382 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,383 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:01,706 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:19:01,707 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:19:01,709 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:19:01,711 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:19:02,453 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:02,454 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:02,454 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:02,710 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:07,711 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:12,713 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:12,953 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:19:15,792 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:19:15,793 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:19:15,794 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:19:18,228 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:23,229 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:27,110 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,114 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,115 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,115 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:19:27,116 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:19:27,117 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:19:27,688 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,689 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,689 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:27,726 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:19:29,119 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:30,793 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:19:30,794 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:19:30,794 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:19:34,210 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:38,606 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,606 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,607 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,607 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,607 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,610 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,610 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:19:38,611 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,612 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:19:38,613 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:19:38,621 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:19:38,732 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:19:39,623 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:39,732 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:19:41,733 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:19:42,957 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:19:44,960 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:49,961 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:53,437 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:19:53,438 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:19:53,825 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:19:55,440 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:19:55,741 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:20:00,441 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:03,323 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:20:03,324 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:20:03,615 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:20:05,727 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:09,697 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:10,728 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:10,998 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:10,999 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:10,999 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:12,958 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:20:15,961 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:18,323 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:20:18,324 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:20:18,615 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:20:21,248 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:26,249 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:31,251 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:33,324 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:20:33,324 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:20:33,629 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:20:36,704 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:37,767 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,768 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,768 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,769 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,769 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,772 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,772 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:20:37,773 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:37,773 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:20:37,780 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:20:38,764 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:20:38,915 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:38,916 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:38,916 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:20:41,782 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:42,964 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:20:46,968 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:48,324 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:20:48,324 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:20:48,630 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:20:52,728 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:20:52,975 WARNING FileStreamThread:1319 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/wyj3777-xidian-university/intrinsic-source-citation/h0cx1dgv/file_stream (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response'))). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7fd2550cf1c0>>, timeout=180), args: ('https://api.wandb.ai/files/wyj3777-xidian-university/intrinsic-source-citation/h0cx1dgv/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"time/epoch": 1, "_timestamp": 1743556837.768612, "time/batch": 6, "time/sample": 351, "time/batch_in_epoch": 0, "time/sample_in_epoch": 0, "time/token": 358854, "time/token_in_epoch": 0, "memory/allocated_mem": 3.3389, "memory/active_mem": 3.3389, "memory/inactive_mem": 0.15282, "memory/reserved_mem": 20.135, "memory/alloc_retries": 0, "trainer/device_train_microbatch_size": 2, "loss/train/total": 1.5657639503479004, "_runtime": 237.53404879570007, "_step": 6, "lr-DeepSpeedZeroOptimizer_Stage3/group0": 6.666666666666667e-05, "time/train": 0.03981959194444444, "time/val": 0.0, "time/total": 0.03981959194444444, "time/remaining_estimate": 0.34499094629287713}']}, 'wandb-events.jsonl': {'offset': 6, 'content': ['{"system.network.sent": 851717.8, "system.network.recv": 829438.47, "system.proc.memory.availableMB": 914601.95, "system.memory": 11.33, "system.proc.memory.rssMB": 24522.37, "system.proc.memory.percent": 2.38, "system.cpu": 0.94, "system.cpu.0.cpu_percent": 30.31, "system.cpu.1.cpu_percent": 4.2, "system.cpu.2.cpu_percent": 2.45, "system.cpu.3.cpu_percent": 1.63, "system.cpu.4.cpu_percent": 12.85, "system.cpu.5.cpu_percent": 8.86, "system.cpu.6.cpu_percent": 41.82, "system.cpu.7.cpu_percent": 2.13, "system.cpu.8.cpu_percent": 3.59, "system.cpu.9.cpu_percent": 1.3, "system.cpu.10.cpu_percent": 1.83, "system.cpu.11.cpu_percent": 1.5, "system.cpu.12.cpu_percent": 1.37, "system.cpu.13.cpu_percent": 1.37, "system.cpu.14.cpu_percent": 1.41, "system.cpu.15.cpu_percent": 1.8, "system.cpu.16.cpu_percent": 1.8, "system.cpu.17.cpu_percent": 1.33, "system.cpu.18.cpu_percent": 0.97, "system.cpu.19.cpu_percent": 1.07, "system.cpu.20.cpu_percent": 1.63, "system.cpu.21.cpu_percent": 1.4, "system.cpu.22.cpu_percent": 1.93, "system.cpu.23.cpu_percent": 1.46, "system.cpu.24.cpu_percent": 1.23, "system.cpu.25.cpu_percent": 0.83, "system.cpu.26.cpu_percent": 1.37, "system.cpu.27.cpu_percent": 0.7, "system.cpu.28.cpu_percent": 1.1, "system.cpu.29.cpu_percent": 1.23, "system.cpu.30.cpu_percent": 1.63, "system.cpu.31.cpu_percent": 0.87, "system.cpu.32.cpu_percent": 9.09, "system.cpu.33.cpu_percent": 3.43, "system.cpu.34.cpu_percent": 4.81, "system.cpu.35.cpu_percent": 6.91, "system.cpu.36.cpu_percent": 2.83, "system.cpu.37.cpu_percent": 0.33, "system.cpu.38.cpu_percent": 0.6, "system.cpu.39.cpu_percent": 2.44, "system.cpu.40.cpu_percent": 4.13, "system.cpu.41.cpu_percent": 1.1, "system.cpu.42.cpu_percent": 2.62, "system.cpu.43.cpu_percent": 3.79, "system.cpu.44.cpu_percent": 3.33, "system.cpu.45.cpu_percent": 0.8, "system.cpu.46.cpu_percent": 1.17, "system.cpu.47.cpu_percent": 0.83, "system.cpu.48.cpu_percent": 6.13, "system.cpu.49.cpu_percent": 100.0, "system.cpu.50.cpu_percent": 4.57, "system.cpu.51.cpu_percent": 2.56, "system.cpu.52.cpu_percent": 3.63, "system.cpu.53.cpu_percent": 5.6, "system.cpu.54.cpu_percent": 4.63, "system.cpu.55.cpu_percent": 2.36, "system.cpu.56.cpu_percent": 2.46, "system.cpu.57.cpu_percent": 5.03, "system.cpu.58.cpu_percent": 0.97, "system.cpu.59.cpu_percent": 9.15, "system.cpu.60.cpu_percent": 5.75, "system.cpu.61.cpu_percent": 10.83, "system.cpu.62.cpu_percent": 0.37, "system.cpu.63.cpu_percent": 48.73, "system.cpu.64.cpu_percent": 1.77, "system.cpu.65.cpu_percent": 1.93, "system.cpu.66.cpu_percent": 1.23, "system.cpu.67.cpu_percent": 1.8, "system.cpu.68.cpu_percent": 0.83, "system.cpu.69.cpu_percent": 1.16, "system.cpu.70.cpu_percent": 5.13, "system.cpu.71.cpu_percent": 1.27, "system.cpu.72.cpu_percent": 1.37, "system.cpu.73.cpu_percent": 1.67, "system.cpu.74.cpu_percent": 2.21, "system.cpu.75.cpu_percent": 1.63, "system.cpu.76.cpu_percent": 1.73, "system.cpu.77.cpu_percent": 1.73, "system.cpu.78.cpu_percent": 1.03, "system.cpu.79.cpu_percent": 1.74, "system.cpu.80.cpu_percent": 2.02, "system.cpu.81.cpu_percent": 1.3, "system.cpu.82.cpu_percent": 1.03, "system.cpu.83.cpu_percent": 0.57, "system.cpu.84.cpu_percent": 1.07, "system.cpu.85.cpu_percent": 1.57, "system.cpu.86.cpu_percent": 0.73, "system.cpu.87.cpu_percent": 1.67, "system.cpu.88.cpu_percent": 1.37, "system.cpu.89.cpu_percent": 1.5, "system.cpu.90.cpu_percent": 1.49, "system.cpu.91.cpu_percent": 1.83, "system.cpu.92.cpu_percent": 1.87, "system.cpu.93.cpu_percent": 1.8, "system.cpu.94.cpu_percent": 3.99, "system.cpu.95.cpu_percent": 17.84, "system.cpu.96.cpu_percent": 1.07, "system.cpu.97.cpu_percent": 5.69, "system.cpu.98.cpu_percent": 7.37, "system.cpu.99.cpu_percent": 2.25, "system.cpu.100.cpu_percent": 1.06, "system.cpu.101.cpu_percent": 3.59, "system.cpu.102.cpu_percent": 1.57, "system.cpu.103.cpu_percent": 3.15, "system.cpu.104.cpu_percent": 1.17, "system.cpu.105.cpu_percent": 3.45, "system.cpu.106.cpu_percent": 2.53, "system.cpu.107.cpu_percent": 0.57, "system.cpu.108.cpu_percent": 1.3, "system.cpu.109.cpu_percent": 0.8, "system.cpu.110.cpu_percent": 0.43, "system.cpu.111.cpu_percent": 0.63, "system.cpu.112.cpu_percent": 1.07, "system.cpu.113.cpu_percent": 0.07, "system.cpu.114.cpu_percent": 0.63, "system.cpu.115.cpu_percent": 0.4, "system.cpu.116.cpu_percent": 0.67, "system.cpu.117.cpu_percent": 0.47, "system.cpu.118.cpu_percent": 0.6, "system.cpu.119.cpu_percent": 0.87, "system.cpu.120.cpu_percent": 1.17, "system.cpu.121.cpu_percent": 3.02, "system.cpu.122.cpu_percent": 0.5, "system.cpu.123.cpu_percent": 0.73, "system.cpu.124.cpu_percent": 5.55, "system.cpu.125.cpu_percent": 0.9, "system.cpu.126.cpu_percent": 1.71, "system.cpu.127.cpu_percent": 26.01, "system.proc.cpu.threads": 40, "system.disk.\\\\.usagePercent": 67.19, "system.disk.\\\\.usageGB": 20.16, "system.disk.in": 244.96, "system.disk.out": 18789.56, "system.gpu.0.memoryAllocated": 61.49, "system.gpu.0.memoryAllocatedBytes": 21122383872.0, "system.gpu.0.memory": 3.2, "system.gpu.0.gpu": 6.07, "system.gpu.0.temp": 48.6, "system.gpu.0.powerWatts": 40.64, "system.gpu.0.powerPercent": 12.7, "_wandb": true, "_timestamp": 1743556842.9577, "_runtime": 242.723137}']}}, 'dropped': 0}}
+2025-04-02 09:20:57,729 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:02,730 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:03,323 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:21:03,324 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:21:03,631 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:21:04,411 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,412 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,412 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,413 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,413 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,415 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,416 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:04,416 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:21:04,417 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:21:04,424 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:21:04,793 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:21:05,767 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:05,767 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:05,767 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:08,425 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:12,970 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:21:13,973 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:18,469 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:21:18,470 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:21:18,630 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:21:19,353 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:24,354 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:29,355 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:30,682 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,723 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,724 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,724 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,724 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,726 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,727 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:30,727 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:21:30,728 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:21:30,729 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:21:30,836 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:21:31,964 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:31,965 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:31,965 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:33,468 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:21:33,470 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:21:33,630 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:21:34,883 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:39,884 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:42,976 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:21:44,979 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:48,470 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:21:48,471 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:21:48,631 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:21:50,790 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:55,791 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:21:57,399 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,400 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,400 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,401 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,401 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,404 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,404 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:21:57,404 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:57,405 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:21:57,412 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:21:57,851 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:21:58,488 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:58,489 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:21:58,489 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:01,413 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:03,470 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:22:03,471 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:22:03,631 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:22:06,853 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:11,855 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:12,981 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:22:14,860 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:22:16,985 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:18,470 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:22:18,471 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:22:18,631 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:22:22,865 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:24,509 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,510 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,511 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,511 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,511 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,514 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,515 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,515 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:22:24,516 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,516 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:22:24,517 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,518 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,518 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,518 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,518 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:24,519 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:22:24,865 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:22:25,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:25,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:25,111 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:28,521 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:33,491 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:22:33,493 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:22:33,631 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:22:33,902 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:37,968 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,011 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,012 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,012 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,012 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,014 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,015 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,015 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: partial_history
+2025-04-02 09:22:38,016 DEBUG   SenderThread:1319 [sender.py:send():380] send: history
+2025-04-02 09:22:38,018 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: summary_record
+2025-04-02 09:22:38,027 INFO    SenderThread:1319 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-02 09:22:38,873 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/wandb-summary.json
+2025-04-02 09:22:39,029 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:39,873 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:22:40,874 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:22:43,016 DEBUG   SenderThread:1319 [sender.py:send():380] send: stats
+2025-04-02 09:22:45,019 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:48,989 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:22:48,989 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:22:48,991 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:22:50,880 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:22:50,972 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:22:52,881 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:22:55,974 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:23:00,974 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: status_report
+2025-04-02 09:23:03,888 INFO    Thread-12 :1319 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250402_091640-h0cx1dgv/files/output.log
+2025-04-02 09:23:03,998 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-02 09:23:04,014 DEBUG   HandlerThread:1319 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-02 09:23:04,016 DEBUG   SenderThread:1319 [sender.py:send_request():407] send_request: stop_status
+2025-04-02 09:23:04,497 INFO    SenderThread:1319 [sender.py:finish():1534] shutting down sender
+2025-04-02 09:23:05,369 INFO    HandlerThread:1319 [handler.py:finish():866] shutting down handler
+2025-04-02 09:23:05,369 INFO    HandlerThread:1319 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-02 09:23:05,371 INFO    HandlerThread:1319 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-02 09:23:05,373 DEBUG   SystemMonitor:1319 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-02 09:23:05,373 DEBUG   SystemMonitor:1319 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-02 09:23:05,376 INFO    HandlerThread:1319 [interfaces.py:finish():202] Joined disk monitor
+2025-04-02 09:23:05,389 INFO    HandlerThread:1319 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-02 09:23:05,389 INFO    HandlerThread:1319 [interfaces.py:finish():202] Joined memory monitor
+2025-04-02 09:23:05,390 INFO    HandlerThread:1319 [interfaces.py:finish():202] Joined network monitor
+2025-04-02 09:23:06,017 ERROR   StreamThr :1319 [internal.py:wandb_internal():174] Thread SenderThread:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 101, in _run
+    self._finish()
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal.py", line 331, in _finish
+    self._sm.finish()
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 1537, in finish
+    self._output_raw_finish()
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 1200, in _output_raw_finish
+    self._output_raw_file.close()
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/filesystem.py", line 136, in close
+    super().write(self._buff)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/filesystem.py", line 99, in write
+    self.f.flush()
+OSError: [Errno 28] No space left on device

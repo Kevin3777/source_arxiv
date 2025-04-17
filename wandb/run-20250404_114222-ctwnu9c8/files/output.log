@@ -1,0 +1,188 @@
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/memory_monitor.py:86: UserWarning: The memory monitor only works on CUDA devices, but the model is on cpu.
+  warnings.warn(f'The memory monitor only works on CUDA devices, but the model is on {model_device.type}.')
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/speed_monitor.py:120: UserWarning: gpu_flop count not found for None with precision: amp_bf16; MFU cannot be calculated and reported. gpu_flops_available can be manuallyoverridden by setting gpu_flops_available in SpeedMonitor.
+  warnings.warn(
+2025-04-04 11:42:41,684: rank0[4182][MainThread]: INFO: composer.trainer.trainer: Stepping schedulers every batch. To step schedulers every epoch, set `step_schedulers_every_batch=False`.
+2025-04-04 11:42:41,685: rank0[4182][MainThread]: DEBUG: composer.trainer.trainer: Initializing deepspeed
+Traceback (most recent call last):
+  File "train.py", line 361, in <module>
+    main(cfg)
+  File "train.py", line 300, in main
+    trainer = Trainer(
+  File "/root/miniconda3/lib/python3.8/site-packages/composer/trainer/trainer.py", line 1280, in __init__
+    (self.state.model, self.state.optimizers, _, _) = deepspeed.initialize(config=self.state.deepspeed_config,
+  File "/root/miniconda3/lib/python3.8/site-packages/deepspeed/__init__.py", line 171, in initialize
+    engine = DeepSpeedEngine(args=args,
+  File "/root/miniconda3/lib/python3.8/site-packages/deepspeed/runtime/engine.py", line 259, in __init__
+    self._configure_distributed_model(model)
+  File "/root/miniconda3/lib/python3.8/site-packages/deepspeed/runtime/engine.py", line 1090, in _configure_distributed_model
+    self.module.to(self.device)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1145, in to
+    return self._apply(convert)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1143, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB (GPU 0; 31.60 GiB total capacity; 989.58 MiB already allocated; 17.19 MiB free; 1.01 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2025-04-04 11:42:41,685] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.12.6, git-hash=unknown, git-branch=unknown
+[2025-04-04 11:42:41,686] [INFO] [comm.py:637:init_distributed] cdb=None
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /root/autodl-tmp/intrinsic-source-citation/[1mtrain.py[22m:[94m361[39m in [92m<module>[39m                              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   358 │                                                                                          [31m│
+[31m│[39m   359 │   cli_cfg = om.from_cli(args_list)                                                       [31m│
+[31m│[39m   360 │   cfg = om.merge(yaml_cfg, cli_cfg)                                                      [31m│
+[31m│[39m [31m❱ [39m361 │   main(cfg)                                                                              [31m│
+[31m│[39m   362                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/autodl-tmp/intrinsic-source-citation/[1mtrain.py[22m:[94m300[39m in [92mmain[39m                                  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   297 │                                                                                          [31m│
+[31m│[39m   298 │   # Build the Trainer                                                                    [31m│
+[31m│[39m   299 │   [96mprint[39m([33m'Building trainer...'[39m)                                                           [31m│
+[31m│[39m [31m❱ [39m300 │   trainer = Trainer(                                                                     [31m│
+[31m│[39m   301 │   │   run_name=cfg.run_name,                                                             [31m│
+[31m│[39m   302 │   │   seed=cfg.seed,                                                                     [31m│
+[31m│[39m   303 │   │   model=model,                                                                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/composer/trainer/[1mtrainer.py[22m:[94m1280[39m in [92m__init__[39m        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1277 │   │   │   [96mself[39m.state.deepspeed_config = _parse_deepspeed_config([96mself[39m.state.deepspeed_c  [31m│
+[31m│[39m   1278 │   │   │   optimizer = ensure_tuple([96mself[39m.state.optimizers)[[94m0[39m]                            [31m│
+[31m│[39m   1279 │   │   │   log.debug([33m'Initializing deepspeed'[39m)                                           [31m│
+[31m│[39m [31m❱ [39m1280 │   │   │   ([96mself[39m.state.model, [96mself[39m.state.optimizers, _, _) = deepspeed.initialize(confi  [31m│
+[31m│[39m   1281 │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │      model  [31m│
+[31m│[39m   1282 │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │      optim  [31m│
+[31m│[39m   1283 │   │   │   # Since the DeepSpeed ZeRO optimizer does not inherit torch.optim.Optimizer,  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/deepspeed/[1m__init__.py[22m:[94m171[39m in [92minitialize[39m             [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   168 │   │   │   │   │   │   │   │   │   │      config=config,                                  [31m│
+[31m│[39m   169 │   │   │   │   │   │   │   │   │   │      config_class=config_class)                      [31m│
+[31m│[39m   170 │   │   [94melse[39m:                                                                              [31m│
+[31m│[39m [31m❱ [39m171 │   │   │   engine = DeepSpeedEngine(args=args,                                            [31m│
+[31m│[39m   172 │   │   │   │   │   │   │   │   │    model=model,                                          [31m│
+[31m│[39m   173 │   │   │   │   │   │   │   │   │    optimizer=optimizer,                                  [31m│
+[31m│[39m   174 │   │   │   │   │   │   │   │   │    model_parameters=model_parameters,                    [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/deepspeed/runtime/[1mengine.py[22m:[94m259[39m in [92m__init__[39m         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    256 │   │   [96mself[39m.pipeline_parallelism = [96misinstance[39m(model, PipelineModule)                     [31m│
+[31m│[39m    257 │   │                                                                                     [31m│
+[31m│[39m    258 │   │   # Configure distributed model                                                     [31m│
+[31m│[39m [31m❱ [39m 259 │   │   [96mself[39m._configure_distributed_model(model)                                          [31m│
+[31m│[39m    260 │   │                                                                                     [31m│
+[31m│[39m    261 │   │   # needed for zero_to_fp32 weights reconstruction to remap nameless data to state  [31m│
+[31m│[39m    262 │   │   [96mself[39m.param_names = {param: name [94mfor[39m name, param [95min[39m model.named_parameters()}      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/deepspeed/runtime/[1mengine.py[22m:[94m1090[39m in                 [31m│
+[31m│[39m [92m_configure_distributed_model[39m                                                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1087 │   │                                                                                     [31m│
+[31m│[39m   1088 │   │   # zero.Init() handles device placement of model                                   [31m│
+[31m│[39m   1089 │   │   [94mif[39m [95mnot[39m ([96mself[39m.dont_change_device [95mor[39m is_zero_init_model):                           [31m│
+[31m│[39m [31m❱ [39m1090 │   │   │   [96mself[39m.module.to([96mself[39m.device)                                                   [31m│
+[31m│[39m   1091 │   │                                                                                     [31m│
+[31m│[39m   1092 │   │   # MoE related initialization                                                      [31m│
+[31m│[39m   1093 │   │   [94mfor[39m _, module [95min[39m [96mself[39m.module.named_modules():                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m1145[39m in [92mto[39m               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1142 │   │   │   │   │   │   │   non_blocking, memory_format=convert_to_format)                [31m│
+[31m│[39m   1143 │   │   │   [94mreturn[39m t.to(device, dtype [94mif[39m t.is_floating_point() [95mor[39m t.is_complex() [94melse[39m [94mNo[39m  [31m│
+[31m│[39m   1144 │   │                                                                                     [31m│
+[31m│[39m [31m❱ [39m1145 │   │   [94mreturn[39m [96mself[39m._apply(convert)                                                       [31m│
+[31m│[39m   1146 │                                                                                         [31m│
+[31m│[39m   1147 │   [94mdef[39m [92mregister_full_backward_pre_hook[39m(                                                  [31m│
+[31m│[39m   1148 │   │   [96mself[39m,                                                                             [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m797[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    794 │                                                                                         [31m│
+[31m│[39m    795 │   [94mdef[39m [92m_apply[39m([96mself[39m, fn):                                                                 [31m│
+[31m│[39m    796 │   │   [94mfor[39m module [95min[39m [96mself[39m.children():                                                    [31m│
+[31m│[39m [31m❱ [39m 797 │   │   │   module._apply(fn)                                                             [31m│
+[31m│[39m    798 │   │                                                                                     [31m│
+[31m│[39m    799 │   │   [94mdef[39m [92mcompute_should_use_set_data[39m(tensor, tensor_applied):                          [31m│
+[31m│[39m    800 │   │   │   [94mif[39m torch._has_compatible_shallow_copy_type(tensor, tensor_applied):           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m820[39m in [92m_apply[39m            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    817 │   │   │   # track autograd history of `param_applied`, so we have to use                [31m│
+[31m│[39m    818 │   │   │   # `with torch.no_grad():`                                                     [31m│
+[31m│[39m    819 │   │   │   [94mwith[39m torch.no_grad():                                                         [31m│
+[31m│[39m [31m❱ [39m 820 │   │   │   │   param_applied = fn(param)                                                 [31m│
+[31m│[39m    821 │   │   │   should_use_set_data = compute_should_use_set_data(param, param_applied)       [31m│
+[31m│[39m    822 │   │   │   [94mif[39m should_use_set_data:                                                       [31m│
+[31m│[39m    823 │   │   │   │   param.data = param_applied                                                [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/[1mmodule.py[22m:[94m1143[39m in [92mconvert[39m          [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1140 │   │   │   [94mif[39m convert_to_format [95mis[39m [95mnot[39m [94mNone[39m [95mand[39m t.dim() [95min[39m ([94m4[39m, [94m5[39m):                       [31m│
+[31m│[39m   1141 │   │   │   │   [94mreturn[39m t.to(device, dtype [94mif[39m t.is_floating_point() [95mor[39m t.is_complex() [94mels[39m  [31m│
+[31m│[39m   1142 │   │   │   │   │   │   │   non_blocking, memory_format=convert_to_format)                [31m│
+[31m│[39m [31m❱ [39m1143 │   │   │   [94mreturn[39m t.to(device, dtype [94mif[39m t.is_floating_point() [95mor[39m t.is_complex() [94melse[39m [94mNo[39m  [31m│
+[31m│[39m   1144 │   │                                                                                     [31m│
+[31m│[39m   1145 │   │   [94mreturn[39m [96mself[39m._apply(convert)                                                       [31m│
+[31m│[39m   1146                                                                                           [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mOutOfMemoryError: [22mCUDA out of memory. Tried to allocate [1m22.00[22m MiB [1m([22mGPU [1m0[22m; [1m31.60[22m GiB total capacity; [1m989.58[22m MiB already
+allocated; [1m17.19[22m MiB free; [1m1.01[22m GiB reserved in total by PyTorch[1m)[22m If reserved memory is >> allocated memory try setting
+max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

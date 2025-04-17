@@ -1,0 +1,208 @@
+2025-04-14 18:37:40,417 INFO    StreamThr :9012 [internal.py:wandb_internal():86] W&B internal server running at pid: 9012, started at: 2025-04-14 18:37:40.416331
+2025-04-14 18:37:40,421 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status
+2025-04-14 18:37:40,425 INFO    WriterThread:9012 [datastore.py:open_for_write():85] open: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/run-1vhnlrzp.wandb
+2025-04-14 18:37:40,430 DEBUG   SenderThread:9012 [sender.py:send():380] send: header
+2025-04-14 18:37:40,431 DEBUG   SenderThread:9012 [sender.py:send():380] send: run
+2025-04-14 18:37:41,613 INFO    SenderThread:9012 [dir_watcher.py:__init__():211] watching files in: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files
+2025-04-14 18:37:41,614 INFO    SenderThread:9012 [sender.py:_start_run_threads():1122] run started: 1vhnlrzp with start time 1744627060.41406
+2025-04-14 18:37:41,622 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: check_version
+2025-04-14 18:37:41,623 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: check_version
+2025-04-14 18:37:42,311 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: run_start
+2025-04-14 18:37:42,358 DEBUG   HandlerThread:9012 [system_info.py:__init__():32] System info init
+2025-04-14 18:37:42,358 DEBUG   HandlerThread:9012 [system_info.py:__init__():47] System info init done
+2025-04-14 18:37:42,358 INFO    HandlerThread:9012 [system_monitor.py:start():194] Starting system monitor
+2025-04-14 18:37:42,359 INFO    SystemMonitor:9012 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-14 18:37:42,360 INFO    HandlerThread:9012 [system_monitor.py:probe():214] Collecting system info
+2025-04-14 18:37:42,360 INFO    SystemMonitor:9012 [interfaces.py:start():190] Started cpu monitoring
+2025-04-14 18:37:42,362 INFO    SystemMonitor:9012 [interfaces.py:start():190] Started disk monitoring
+2025-04-14 18:37:42,365 INFO    SystemMonitor:9012 [interfaces.py:start():190] Started gpu monitoring
+2025-04-14 18:37:42,370 INFO    SystemMonitor:9012 [interfaces.py:start():190] Started memory monitoring
+2025-04-14 18:37:42,382 INFO    SystemMonitor:9012 [interfaces.py:start():190] Started network monitoring
+2025-04-14 18:37:42,468 DEBUG   HandlerThread:9012 [system_info.py:probe():196] Probing system
+2025-04-14 18:37:42,477 DEBUG   HandlerThread:9012 [gitlib.py:_init_repo():53] git repository is invalid
+2025-04-14 18:37:42,477 DEBUG   HandlerThread:9012 [system_info.py:probe():244] Probing system done
+2025-04-14 18:37:42,477 DEBUG   HandlerThread:9012 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-155-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2025-04-14T10:37:42.468456', 'startedAt': '2025-04-14T10:37:40.405021', 'docker': None, 'cuda': None, 'args': ('outputs/experiments/arxiv-citation-doc-id-begin/train_config.yaml',), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'autodl-container-11d445a847-7722b670', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 942.7950000000003, 'min': 800.0, 'max': 2001.0}, 'cpu_freq_per_core': [{'current': 948.571, 'min': 800.0, 'max': 2001.0}, {'current': 850.659, 'min': 800.0, 'max': 2001.0}, {'current': 800.089, 'min': 800.0, 'max': 2001.0}, {'current': 997.64, 'min': 800.0, 'max': 2001.0}, {'current': 871.041, 'min': 800.0, 'max': 2001.0}, {'current': 800.174, 'min': 800.0, 'max': 2001.0}, {'current': 844.764, 'min': 800.0, 'max': 2001.0}, {'current': 1321.141, 'min': 800.0, 'max': 2001.0}, {'current': 1379.674, 'min': 800.0, 'max': 2001.0}, {'current': 899.741, 'min': 800.0, 'max': 2001.0}, {'current': 879.712, 'min': 800.0, 'max': 2001.0}, {'current': 804.192, 'min': 800.0, 'max': 2001.0}, {'current': 800.247, 'min': 800.0, 'max': 2001.0}, {'current': 800.238, 'min': 800.0, 'max': 2001.0}, {'current': 921.808, 'min': 800.0, 'max': 2001.0}, {'current': 808.72, 'min': 800.0, 'max': 2001.0}, {'current': 800.18, 'min': 800.0, 'max': 2001.0}, {'current': 801.279, 'min': 800.0, 'max': 2001.0}, {'current': 800.437, 'min': 800.0, 'max': 2001.0}, {'current': 800.021, 'min': 800.0, 'max': 2001.0}, {'current': 863.27, 'min': 800.0, 'max': 2001.0}, {'current': 899.697, 'min': 800.0, 'max': 2001.0}, {'current': 910.63, 'min': 800.0, 'max': 2001.0}, {'current': 864.391, 'min': 800.0, 'max': 2001.0}, {'current': 1021.344, 'min': 800.0, 'max': 2001.0}, {'current': 800.31, 'min': 800.0, 'max': 2001.0}, {'current': 800.256, 'min': 800.0, 'max': 2001.0}, {'current': 858.39, 'min': 800.0, 'max': 2001.0}, {'current': 831.155, 'min': 800.0, 'max': 2001.0}, {'current': 815.655, 'min': 800.0, 'max': 2001.0}, {'current': 800.167, 'min': 800.0, 'max': 2001.0}, {'current': 801.268, 'min': 800.0, 'max': 2001.0}, {'current': 800.316, 'min': 800.0, 'max': 2001.0}, {'current': 1073.115, 'min': 800.0, 'max': 2001.0}, {'current': 866.906, 'min': 800.0, 'max': 2001.0}, {'current': 1044.579, 'min': 800.0, 'max': 2001.0}, {'current': 856.437, 'min': 800.0, 'max': 2001.0}, {'current': 858.759, 'min': 800.0, 'max': 2001.0}, {'current': 874.574, 'min': 800.0, 'max': 2001.0}, {'current': 800.873, 'min': 800.0, 'max': 2001.0}, {'current': 1999.998, 'min': 800.0, 'max': 2001.0}, {'current': 800.232, 'min': 800.0, 'max': 2001.0}, {'current': 877.349, 'min': 800.0, 'max': 2001.0}, {'current': 1122.775, 'min': 800.0, 'max': 2001.0}, {'current': 800.257, 'min': 800.0, 'max': 2001.0}, {'current': 994.87, 'min': 800.0, 'max': 2001.0}, {'current': 800.426, 'min': 800.0, 'max': 2001.0}, {'current': 914.521, 'min': 800.0, 'max': 2001.0}, {'current': 969.112, 'min': 800.0, 'max': 2001.0}, {'current': 800.887, 'min': 800.0, 'max': 2001.0}, {'current': 860.066, 'min': 800.0, 'max': 2001.0}, {'current': 801.365, 'min': 800.0, 'max': 2001.0}, {'current': 952.464, 'min': 800.0, 'max': 2001.0}, {'current': 968.552, 'min': 800.0, 'max': 2001.0}, {'current': 800.89, 'min': 800.0, 'max': 2001.0}, {'current': 800.872, 'min': 800.0, 'max': 2001.0}, {'current': 800.262, 'min': 800.0, 'max': 2001.0}, {'current': 800.889, 'min': 800.0, 'max': 2001.0}, {'current': 907.645, 'min': 800.0, 'max': 2001.0}, {'current': 893.606, 'min': 800.0, 'max': 2001.0}, {'current': 800.052, 'min': 800.0, 'max': 2001.0}, {'current': 841.504, 'min': 800.0, 'max': 2001.0}, {'current': 834.467, 'min': 800.0, 'max': 2001.0}, {'current': 826.347, 'min': 800.0, 'max': 2001.0}, {'current': 1235.388, 'min': 800.0, 'max': 2001.0}, {'current': 804.437, 'min': 800.0, 'max': 2001.0}, {'current': 800.078, 'min': 800.0, 'max': 2001.0}, {'current': 987.508, 'min': 800.0, 'max': 2001.0}, {'current': 898.477, 'min': 800.0, 'max': 2001.0}, {'current': 824.343, 'min': 800.0, 'max': 2001.0}, {'current': 801.583, 'min': 800.0, 'max': 2001.0}, {'current': 1545.994, 'min': 800.0, 'max': 2001.0}, {'current': 2000.0, 'min': 800.0, 'max': 2001.0}, {'current': 898.098, 'min': 800.0, 'max': 2001.0}, {'current': 864.194, 'min': 800.0, 'max': 2001.0}, {'current': 1061.58, 'min': 800.0, 'max': 2001.0}, {'current': 801.448, 'min': 800.0, 'max': 2001.0}, {'current': 800.106, 'min': 800.0, 'max': 2001.0}, {'current': 831.379, 'min': 800.0, 'max': 2001.0}, {'current': 926.761, 'min': 800.0, 'max': 2001.0}, {'current': 800.091, 'min': 800.0, 'max': 2001.0}, {'current': 800.084, 'min': 800.0, 'max': 2001.0}, {'current': 800.879, 'min': 800.0, 'max': 2001.0}, {'current': 801.392, 'min': 800.0, 'max': 2001.0}, {'current': 956.749, 'min': 800.0, 'max': 2001.0}, {'current': 886.037, 'min': 800.0, 'max': 2001.0}, {'current': 969.557, 'min': 800.0, 'max': 2001.0}, {'current': 847.72, 'min': 800.0, 'max': 2001.0}, {'current': 984.292, 'min': 800.0, 'max': 2001.0}, {'current': 800.283, 'min': 800.0, 'max': 2001.0}, {'current': 800.363, 'min': 800.0, 'max': 2001.0}, {'current': 887.464, 'min': 800.0, 'max': 2001.0}, {'current': 947.738, 'min': 800.0, 'max': 2001.0}, {'current': 834.549, 'min': 800.0, 'max': 2001.0}, {'current': 800.966, 'min': 800.0, 'max': 2001.0}, {'current': 800.142, 'min': 800.0, 'max': 2001.0}, {'current': 800.064, 'min': 800.0, 'max': 2001.0}, {'current': 801.314, 'min': 800.0, 'max': 2001.0}, {'current': 959.634, 'min': 800.0, 'max': 2001.0}, {'current': 1370.937, 'min': 800.0, 'max': 2001.0}, {'current': 801.326, 'min': 800.0, 'max': 2001.0}, {'current': 800.198, 'min': 800.0, 'max': 2001.0}, {'current': 851.287, 'min': 800.0, 'max': 2001.0}, {'current': 800.431, 'min': 800.0, 'max': 2001.0}, {'current': 2002.915, 'min': 800.0, 'max': 2001.0}, {'current': 800.283, 'min': 800.0, 'max': 2001.0}, {'current': 800.196, 'min': 800.0, 'max': 2001.0}, {'current': 1138.355, 'min': 800.0, 'max': 2001.0}, {'current': 800.913, 'min': 800.0, 'max': 2001.0}, {'current': 995.016, 'min': 800.0, 'max': 2001.0}, {'current': 800.217, 'min': 800.0, 'max': 2001.0}, {'current': 964.679, 'min': 800.0, 'max': 2001.0}, {'current': 883.313, 'min': 800.0, 'max': 2001.0}, {'current': 800.232, 'min': 800.0, 'max': 2001.0}, {'current': 857.467, 'min': 800.0, 'max': 2001.0}, {'current': 801.374, 'min': 800.0, 'max': 2001.0}, {'current': 1018.963, 'min': 800.0, 'max': 2001.0}, {'current': 897.364, 'min': 800.0, 'max': 2001.0}, {'current': 800.888, 'min': 800.0, 'max': 2001.0}, {'current': 893.66, 'min': 800.0, 'max': 2001.0}, {'current': 864.598, 'min': 800.0, 'max': 2001.0}, {'current': 832.87, 'min': 800.0, 'max': 2001.0}, {'current': 1018.215, 'min': 800.0, 'max': 2001.0}, {'current': 862.955, 'min': 800.0, 'max': 2001.0}, {'current': 800.867, 'min': 800.0, 'max': 2001.0}, {'current': 800.0, 'min': 800.0, 'max': 2001.0}, {'current': 801.324, 'min': 800.0, 'max': 2001.0}, {'current': 859.747, 'min': 800.0, 'max': 2001.0}], 'disk': {'/': {'total': 30.0, 'used': 10.78924560546875}}, 'gpu': 'NVIDIA vGPU-32GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA vGPU-32GB', 'memory_total': 34351349760}], 'memory': {'total': 1007.5241508483887}}
+2025-04-14 18:37:42,477 INFO    HandlerThread:9012 [system_monitor.py:probe():224] Finished collecting system info
+2025-04-14 18:37:42,477 INFO    HandlerThread:9012 [system_monitor.py:probe():227] Publishing system info
+2025-04-14 18:37:42,477 DEBUG   HandlerThread:9012 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-04-14 18:37:42,478 DEBUG   HandlerThread:9012 [system_info.py:_save_pip():68] Saving pip packages done
+2025-04-14 18:37:42,478 DEBUG   HandlerThread:9012 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-04-14 18:37:42,619 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/requirements.txt
+2025-04-14 18:37:42,620 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/conda-environment.yaml
+2025-04-14 18:37:58,314 DEBUG   HandlerThread:9012 [system_info.py:_save_conda():87] Saving conda packages done
+2025-04-14 18:37:58,319 INFO    HandlerThread:9012 [system_monitor.py:probe():229] Finished publishing system info
+2025-04-14 18:37:58,329 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:37:58,329 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-14 18:37:58,330 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:37:58,330 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-14 18:37:58,330 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:37:58,330 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-14 18:37:58,332 DEBUG   SenderThread:9012 [sender.py:send():380] send: files
+2025-04-14 18:37:58,332 INFO    SenderThread:9012 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2025-04-14 18:37:58,345 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-14 18:37:58,346 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: stop_status
+2025-04-14 18:37:58,352 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-14 18:37:58,622 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/conda-environment.yaml
+2025-04-14 18:37:58,623 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/wandb-metadata.json
+2025-04-14 18:37:59,302 DEBUG   SenderThread:9012 [sender.py:send():380] send: telemetry
+2025-04-14 18:37:59,305 DEBUG   SenderThread:9012 [sender.py:send():380] send: config
+2025-04-14 18:37:59,305 DEBUG   SenderThread:9012 [sender.py:send():380] send: config
+2025-04-14 18:37:59,623 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:00,289 INFO    wandb-upload_0:9012 [upload_job.py:push():131] Uploaded file /tmp/tmps00_0co3wandb/qiptasez-wandb-metadata.json
+2025-04-14 18:38:01,499 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:01,624 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:03,625 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:05,626 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:06,803 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:11,809 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:12,630 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/config.yaml
+2025-04-14 18:38:13,343 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-14 18:38:13,345 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: stop_status
+2025-04-14 18:38:13,352 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-14 18:38:17,680 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:22,681 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:28,343 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-14 18:38:28,344 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: stop_status
+2025-04-14 18:38:28,350 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-14 18:38:28,768 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:29,640 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:30,001 DEBUG   SenderThread:9012 [sender.py:send():380] send: config
+2025-04-14 18:38:30,002 DEBUG   SenderThread:9012 [sender.py:send():380] send: config
+2025-04-14 18:38:30,651 DEBUG   SenderThread:9012 [sender.py:send():380] send: exit
+2025-04-14 18:38:30,651 INFO    SenderThread:9012 [sender.py:send_exit():585] handling exit code: 1
+2025-04-14 18:38:30,651 INFO    SenderThread:9012 [sender.py:send_exit():587] handling runtime: 48
+2025-04-14 18:38:30,652 INFO    SenderThread:9012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-14 18:38:30,653 INFO    SenderThread:9012 [sender.py:send_exit():593] send defer
+2025-04-14 18:38:30,653 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,653 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 0
+2025-04-14 18:38:30,654 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,654 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 0
+2025-04-14 18:38:30,654 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 1
+2025-04-14 18:38:30,654 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,654 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 1
+2025-04-14 18:38:30,655 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,655 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 1
+2025-04-14 18:38:30,655 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 2
+2025-04-14 18:38:30,655 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,655 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 2
+2025-04-14 18:38:30,656 INFO    HandlerThread:9012 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-14 18:38:30,656 DEBUG   SystemMonitor:9012 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-14 18:38:30,657 INFO    HandlerThread:9012 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-14 18:38:30,657 DEBUG   SystemMonitor:9012 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-14 18:38:30,658 INFO    HandlerThread:9012 [interfaces.py:finish():202] Joined disk monitor
+2025-04-14 18:38:30,659 DEBUG   SystemMonitor:9012 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-14 18:38:30,676 INFO    HandlerThread:9012 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-14 18:38:30,676 INFO    HandlerThread:9012 [interfaces.py:finish():202] Joined memory monitor
+2025-04-14 18:38:30,677 INFO    HandlerThread:9012 [interfaces.py:finish():202] Joined network monitor
+2025-04-14 18:38:30,678 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,678 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 2
+2025-04-14 18:38:30,678 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 3
+2025-04-14 18:38:30,679 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,679 DEBUG   SenderThread:9012 [sender.py:send():380] send: stats
+2025-04-14 18:38:30,679 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 3
+2025-04-14 18:38:30,683 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,683 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 3
+2025-04-14 18:38:30,683 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 4
+2025-04-14 18:38:30,684 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,684 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 4
+2025-04-14 18:38:30,685 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,685 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 4
+2025-04-14 18:38:30,685 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 5
+2025-04-14 18:38:30,685 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,685 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 5
+2025-04-14 18:38:30,687 DEBUG   SenderThread:9012 [sender.py:send():380] send: summary
+2025-04-14 18:38:30,688 INFO    SenderThread:9012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2025-04-14 18:38:30,689 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,689 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 5
+2025-04-14 18:38:30,689 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 6
+2025-04-14 18:38:30,689 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:30,690 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 6
+2025-04-14 18:38:30,690 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:30,690 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 6
+2025-04-14 18:38:30,696 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: status_report
+2025-04-14 18:38:31,332 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 7
+2025-04-14 18:38:31,332 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:31,332 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 7
+2025-04-14 18:38:31,333 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:31,333 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 7
+2025-04-14 18:38:31,641 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:31,641 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/config.yaml
+2025-04-14 18:38:31,642 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/wandb-summary.json
+2025-04-14 18:38:31,651 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: poll_exit
+2025-04-14 18:38:33,481 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 8
+2025-04-14 18:38:33,481 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: poll_exit
+2025-04-14 18:38:33,482 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:33,482 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 8
+2025-04-14 18:38:33,483 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:33,483 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 8
+2025-04-14 18:38:33,483 INFO    SenderThread:9012 [job_builder.py:build():281] Attempting to build job artifact
+2025-04-14 18:38:33,487 INFO    SenderThread:9012 [job_builder.py:_get_source_type():404] no source found
+2025-04-14 18:38:33,487 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 9
+2025-04-14 18:38:33,488 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:33,488 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 9
+2025-04-14 18:38:33,489 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:33,489 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 9
+2025-04-14 18:38:33,489 INFO    SenderThread:9012 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-04-14 18:38:33,642 INFO    Thread-12 :9012 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:33,643 INFO    SenderThread:9012 [dir_watcher.py:finish():388] scan: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files
+2025-04-14 18:38:33,644 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/config.yaml config.yaml
+2025-04-14 18:38:33,644 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/requirements.txt requirements.txt
+2025-04-14 18:38:33,645 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/conda-environment.yaml conda-environment.yaml
+2025-04-14 18:38:33,645 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/wandb-metadata.json wandb-metadata.json
+2025-04-14 18:38:33,645 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log output.log
+2025-04-14 18:38:33,645 INFO    SenderThread:9012 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/wandb-summary.json wandb-summary.json
+2025-04-14 18:38:33,646 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 10
+2025-04-14 18:38:33,646 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:33,647 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 10
+2025-04-14 18:38:33,648 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:33,649 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 10
+2025-04-14 18:38:33,649 INFO    SenderThread:9012 [file_pusher.py:finish():175] shutting down file pusher
+2025-04-14 18:38:35,325 INFO    wandb-upload_1:9012 [upload_job.py:push():131] Uploaded file /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/config.yaml
+2025-04-14 18:38:35,705 INFO    wandb-upload_4:9012 [upload_job.py:push():131] Uploaded file /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/wandb-summary.json
+2025-04-14 18:38:35,912 INFO    wandb-upload_2:9012 [upload_job.py:push():131] Uploaded file /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/conda-environment.yaml
+2025-04-14 18:38:36,017 INFO    wandb-upload_0:9012 [upload_job.py:push():131] Uploaded file /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/requirements.txt
+2025-04-14 18:38:36,633 INFO    wandb-upload_3:9012 [upload_job.py:push():131] Uploaded file /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/files/output.log
+2025-04-14 18:38:36,668 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-14 18:38:36,834 INFO    Thread-11 :9012 [sender.py:transition_state():613] send defer: 11
+2025-04-14 18:38:36,835 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:36,835 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 11
+2025-04-14 18:38:36,837 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:36,837 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 11
+2025-04-14 18:38:36,837 INFO    SenderThread:9012 [file_pusher.py:join():181] waiting for file pusher
+2025-04-14 18:38:36,837 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 12
+2025-04-14 18:38:36,837 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:36,838 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 12
+2025-04-14 18:38:36,839 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:36,839 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 12
+2025-04-14 18:38:36,839 INFO    SenderThread:9012 [file_stream.py:finish():595] file stream finish called
+2025-04-14 18:38:37,137 INFO    SenderThread:9012 [file_stream.py:finish():599] file stream finish is done
+2025-04-14 18:38:37,138 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 13
+2025-04-14 18:38:37,138 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:37,138 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 13
+2025-04-14 18:38:37,139 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:37,139 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 13
+2025-04-14 18:38:37,140 INFO    SenderThread:9012 [sender.py:transition_state():613] send defer: 14
+2025-04-14 18:38:37,140 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: defer
+2025-04-14 18:38:37,140 INFO    HandlerThread:9012 [handler.py:handle_request_defer():172] handle defer: 14
+2025-04-14 18:38:37,141 DEBUG   SenderThread:9012 [sender.py:send():380] send: final
+2025-04-14 18:38:37,142 DEBUG   SenderThread:9012 [sender.py:send():380] send: footer
+2025-04-14 18:38:37,142 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: defer
+2025-04-14 18:38:37,142 INFO    SenderThread:9012 [sender.py:send_request_defer():609] handle sender defer: 14
+2025-04-14 18:38:37,143 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: poll_exit
+2025-04-14 18:38:37,145 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: poll_exit
+2025-04-14 18:38:37,145 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: server_info
+2025-04-14 18:38:37,148 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: server_info
+2025-04-14 18:38:37,153 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: get_summary
+2025-04-14 18:38:37,154 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: sampled_history
+2025-04-14 18:38:37,155 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-14 18:38:37,156 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: job_info
+2025-04-14 18:38:37,466 DEBUG   SenderThread:9012 [sender.py:send_request():407] send_request: job_info
+2025-04-14 18:38:37,466 INFO    MainThread:9012 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2025-04-14 18:38:37,467 INFO    MainThread:9012 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2025-04-14 18:38:37,467 INFO    MainThread:9012 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2025-04-14 18:38:37,468 DEBUG   HandlerThread:9012 [handler.py:handle_request():146] handle_request: shutdown
+2025-04-14 18:38:37,468 INFO    HandlerThread:9012 [handler.py:finish():866] shutting down handler
+2025-04-14 18:38:38,157 INFO    WriterThread:9012 [datastore.py:close():294] close: /root/autodl-tmp/intrinsic-source-citation/wandb/run-20250414_183740-1vhnlrzp/run-1vhnlrzp.wandb
+2025-04-14 18:38:38,466 INFO    SenderThread:9012 [sender.py:finish():1534] shutting down sender
+2025-04-14 18:38:38,466 INFO    SenderThread:9012 [file_pusher.py:finish():175] shutting down file pusher
+2025-04-14 18:38:38,467 INFO    SenderThread:9012 [file_pusher.py:join():181] waiting for file pusher

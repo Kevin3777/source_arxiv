@@ -1,0 +1,50 @@
+## experiment
+experiment:
+  name: arxiv_citation_experiment
+  output_dir: outputs/experiments/
+
+## data
+data:
+  text_data_path: /root/autodl-tmp/intrinsic-source-citation/ours
+  augment:
+    doc:
+      do: false  # 是否进行数据增强
+      method: permute
+      n_sample_per_doc: 2
+
+## model
+model:
+  name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T  # 可以根据需要选择模型
+
+train:
+  url_location: no_url  # 根据你的数据集调整
+  pretrain: true
+  sequential: false
+  finetune_q_url_a: false
+  finetune_q_a_url: false
+  finetune_q_a: false
+  finetune_q_a_doc_url: false
+  
+  # 添加这一行
+  repeat_url_across_doc: false
+  
+  config_template_path: conf/templates/train_config.yaml
+  device_train_microbatch_size: 2
+  device_eval_batch_size: 40
+  lr: 8.0e-5
+  max_duration: 10ep
+  weight_decay: 0.02
+  
+  # 损失和注意力配置
+  cross_doc_attention: false
+  url_loss_factor: 1.0
+  loss_type: mask
+
+eval:
+  disable_qa_eval: true  # 根据数据集调整
+  disable_all_eval: false
+  disable_attribution_eval: true
+  disable_non_attrib_eval: true
+  icl_eval: false
+  ppl_eval: false
+  use_ais: false

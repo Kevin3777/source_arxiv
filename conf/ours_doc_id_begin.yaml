@@ -1,0 +1,56 @@
+# Experiment Configuration
+
+experiment:
+  name: arxiv-citation-doc-id-begin
+  output_dir: outputs/experiments/
+
+data:
+  text_data_path: dataset/ours/pretrain  # 指向预训练数据集目录
+  train_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain/train
+  qa_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours
+  augment:
+    doc:
+      do: false
+      method: permute
+      n_sample_per_doc: 2
+  finetune:
+    number_non_attributable_negatives: 0
+    neg_create_probability: 0.0
+
+model:
+  name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+
+train:
+  url_location: first  # URL 位置在文档开头
+  pretrain: true
+  sequential: false
+  finetune_q_url_a: false
+  repeat_url_across_doc: false
+  finetune_q_a_url: true
+  finetune_q_a: false
+  finetune_q_a_doc_url: false
+  q_a_url_predict_url_only: false
+  
+  # 损失和注意力配置
+  cross_doc_attention: false
+  url_loss_factor: 1.0
+  loss_type: mask
+  config_template_path: conf/templates/train_config.yaml
+  
+  # 训练参数
+  device_eval_batch_size: 40
+  device_train_microbatch_size: 2
+  eval_first: false
+  weight_decay: 0.02
+  lr: 8.0e-5
+  max_duration: 10ep
+  save_folder: "outputs/experiments/arxiv-citation-doc-id-begin/checkpoints"
+
+eval:  
+  disable_qa_eval: false
+  disable_all_eval: false
+  disable_attribution_eval: false
+  disable_non_attrib_eval: true
+  icl_eval: false
+  ppl_eval: false
+  use_ais: false

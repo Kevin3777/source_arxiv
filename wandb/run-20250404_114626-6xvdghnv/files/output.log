@@ -1,0 +1,369 @@
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/memory_monitor.py:86: UserWarning: The memory monitor only works on CUDA devices, but the model is on cpu.
+  warnings.warn(f'The memory monitor only works on CUDA devices, but the model is on {model_device.type}.')
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/speed_monitor.py:120: UserWarning: gpu_flop count not found for None with precision: amp_bf16; MFU cannot be calculated and reported. gpu_flops_available can be manuallyoverridden by setting gpu_flops_available in SpeedMonitor.
+  warnings.warn(
+2025-04-04 11:46:46,018: rank0[4553][MainThread]: INFO: composer.trainer.trainer: Stepping schedulers every batch. To step schedulers every epoch, set `step_schedulers_every_batch=False`.
+2025-04-04 11:46:46,020: rank0[4553][MainThread]: DEBUG: composer.trainer.trainer: Initializing deepspeed
+[2025-04-04 11:46:46,020] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.12.6, git-hash=unknown, git-branch=unknown
+[2025-04-04 11:46:46,020] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-04-04 11:46:47,210] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-04-04 11:46:47,212] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-04-04 11:46:47,212] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-04-04 11:46:47,222] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2025-04-04 11:46:47,223] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2025-04-04 11:46:47,223] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-04-04 11:46:47,223] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-04-04 11:46:47,468] [INFO] [utils.py:791:see_memory_usage] Stage 3 initialize beginning
+[2025-04-04 11:46:47,470] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.15 GB         Max_CA 2 GB
+[2025-04-04 11:46:47,470] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.42 GB, percent = 18.0%
+[2025-04-04 11:46:47,472] [INFO] [stage3.py:127:__init__] Reduce bucket size 1
+[2025-04-04 11:46:47,472] [INFO] [stage3.py:128:__init__] Prefetch bucket size 50,000,000
+[2025-04-04 11:46:47,639] [INFO] [utils.py:791:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-04-04 11:46:47,640] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.15 GB         Max_CA 2 GB
+[2025-04-04 11:46:47,640] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.42 GB, percent = 18.0%
+Parameter Offload: Total persistent parameters: 92160 in 45 params
+[2025-04-04 11:46:47,878] [INFO] [utils.py:791:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-04-04 11:46:47,880] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.18 GB         CA 2.31 GB         Max_CA 2 GB
+[2025-04-04 11:46:47,880] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.42 GB, percent = 18.0%
+[2025-04-04 11:46:48,057] [INFO] [utils.py:791:see_memory_usage] Before creating fp16 partitions
+[2025-04-04 11:46:48,058] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.31 GB         Max_CA 2 GB
+[2025-04-04 11:46:48,059] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.59 GB, percent = 18.0%
+[2025-04-04 11:46:50,581] [INFO] [utils.py:791:see_memory_usage] After creating fp16 partitions: 2
+[2025-04-04 11:46:50,583] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-04 11:46:50,583] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.42 GB, percent = 18.0%
+[2025-04-04 11:46:50,753] [INFO] [utils.py:791:see_memory_usage] Before creating fp32 partitions
+[2025-04-04 11:46:50,754] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-04 11:46:50,754] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 181.42 GB, percent = 18.0%
+[2025-04-04 11:46:53,084] [INFO] [utils.py:791:see_memory_usage] After creating fp32 partitions
+[2025-04-04 11:46:53,085] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-04 11:46:53,085] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 185.52 GB, percent = 18.4%
+[2025-04-04 11:46:53,245] [INFO] [utils.py:791:see_memory_usage] Before initializing optimizer states
+[2025-04-04 11:46:53,246] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-04 11:46:53,246] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 185.52 GB, percent = 18.4%
+[2025-04-04 11:46:58,389] [INFO] [utils.py:791:see_memory_usage] After initializing optimizer states
+[2025-04-04 11:46:58,390] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-04 11:46:58,391] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 198.3 GB, percent = 19.7%
+[2025-04-04 11:46:58,391] [INFO] [stage3.py:479:_setup_for_real_optimizer] optimizer state initialized
+2025-04-04 11:47:01,324: rank0[4553][MainThread]: INFO: composer.trainer.trainer: Setting seed to 17
+2025-04-04 11:47:01,325: rank0[4553][MainThread]: INFO: composer.utils.reproducibility: Setting seed to 17
+2025-04-04 11:47:01,350: rank0[4553][MainThread]: INFO: composer.trainer.trainer: Using precision Precision.AMP_BF16
+******************************
+Config:
+enabled_algorithms/GradientClipping: true
+node_name: unknown because NODENAME environment variable not set
+num_gpus_per_node: 1
+num_nodes: 1
+rank_zero_seed: 17
+******************************
+2025-04-04 11:47:01,353: rank0[4553][MainThread]: DEBUG: composer.trainer.trainer: Spinning the dataloaders
+[2025-04-04 11:47:01,310] [INFO] [utils.py:791:see_memory_usage] After initializing ZeRO optimizer
+[2025-04-04 11:47:01,312] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.31 GB         CA 2.38 GB         Max_CA 2 GB
+[2025-04-04 11:47:01,312] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 202.32 GB, percent = 20.1%
+[2025-04-04 11:47:01,312] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedCPUAdam
+[2025-04-04 11:47:01,312] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2025-04-04 11:47:01,313] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-04-04 11:47:01,313] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0], mom=[[0.9, 0.98]]
+[2025-04-04 11:47:01,314] [INFO] [config.py:984:print] DeepSpeedEngine configuration:
+[2025-04-04 11:47:01,314] [INFO] [config.py:988:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   amp_enabled .................. False
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   amp_params ................... False
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   bfloat16_enabled ............. True
+[2025-04-04 11:47:01,315] [INFO] [config.py:988:print]   checkpoint_parallel_write_pipeline  False
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   checkpoint_tag_validation_enabled  True
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   checkpoint_tag_validation_fail  False
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fd08aefea00>
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   communication_data_type ...... None
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   curriculum_enabled_legacy .... False
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   curriculum_params_legacy ..... False
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-04-04 11:47:01,316] [INFO] [config.py:988:print]   data_efficiency_enabled ...... False
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   dataloader_drop_last ......... False
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   disable_allgather ............ False
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   dump_state ................... False
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   dynamic_loss_scale_args ...... None
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_enabled ........... False
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_gas_boundary_resolution  1
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_layer_num ......... 0
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_max_iter .......... 100
+[2025-04-04 11:47:01,317] [INFO] [config.py:988:print]   eigenvalue_stability ......... 1e-06
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   eigenvalue_tol ............... 0.01
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   eigenvalue_verbose ........... False
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   elasticity_enabled ........... False
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   fp16_auto_cast ............... None
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   fp16_enabled ................. False
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   fp16_master_weights_and_gradients  False
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   global_rank .................. 0
+[2025-04-04 11:47:01,318] [INFO] [config.py:988:print]   grad_accum_dtype ............. None
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   gradient_accumulation_steps .. 64
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   gradient_clipping ............ 1.0
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   gradient_predivide_factor .... 1.0
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   graph_harvesting ............. False
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   initial_dynamic_scale ........ 1
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   load_universal_checkpoint .... False
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   loss_scale ................... 1.0
+[2025-04-04 11:47:01,319] [INFO] [config.py:988:print]   memory_breakdown ............. False
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   mics_hierarchial_params_gather  False
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   mics_shard_size .............. -1
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   optimizer_legacy_fusion ...... False
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   optimizer_name ............... None
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   optimizer_params ............. None
+[2025-04-04 11:47:01,320] [INFO] [config.py:988:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   pld_enabled .................. False
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   pld_params ................... False
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   prescale_gradients ........... False
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   scheduler_name ............... None
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   scheduler_params ............. None
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   seq_parallel_communication_data_type  torch.float32
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   sparse_attention ............. None
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   sparse_gradients_enabled ..... False
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   steps_per_print .............. 10
+[2025-04-04 11:47:01,321] [INFO] [config.py:988:print]   train_batch_size ............. 64
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   train_micro_batch_size_per_gpu  1
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   use_data_before_expert_parallel_  False
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   use_node_local_storage ....... False
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   wall_clock_breakdown ......... False
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   weight_quantization_config ... None
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   world_size ................... 1
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   zero_allow_untested_optimizer  True
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=1 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=200000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2025-04-04 11:47:01,322] [INFO] [config.py:988:print]   zero_enabled ................. True
+[2025-04-04 11:47:01,323] [INFO] [config.py:988:print]   zero_force_ds_cpu_optimizer .. True
+[2025-04-04 11:47:01,323] [INFO] [config.py:988:print]   zero_optimization_stage ...... 3
+[2025-04-04 11:47:01,323] [INFO] [config.py:974:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    },
+    "train_batch_size": 64,
+    "zero_optimization": {
+        "allgather_bucket_size": 2.000000e+08,
+        "contiguous_gradients": true,
+        "offload_optimizer": {
+            "device": "cpu",
+            "pin_memory": true
+        },
+        "overlap_comm": true,
+        "reduce_bucket_size": true,
+        "reduce_scatter": true,
+        "stage": 3
+    },
+    "gradient_clipping": 1.0,
+    "gradient_accumulation_steps": 64,
+    "train_micro_batch_size_per_gpu": 1,
+    "zero_allow_untested_optimizer": true
+}
+Logging config...
+algorithms:
+  gradient_clipping:
+    clipping_threshold: 1.0
+    clipping_type: norm
+callbacks:
+  lr_monitor: {}
+  memory_monitor: {}
+  runtime_estimator: {}
+  speed_monitor:
+    window_size: 10
+console_log_interval: 50ba
+cross_doc_attention: false
+dataloaders:
+- dataset:
+    local: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/
+    max_seq_len: 2048
+    split: train
+  drop_last: false
+  name: train_loader_docs
+  num_workers: 0
+- dataset:
+    max_seq_len: 2048
+    path: sample-data/biocite-1k/text/qa
+    split: qa_eval_in_domain
+  drop_last: false
+  name: in_domain_standard_q_answer_eval_loader
+  num_workers: 0
+- dataset:
+    max_seq_len: 2048
+    path: sample-data/biocite-1k/text/qa
+    split: qa_eval_out_of_domain
+  drop_last: false
+  name: out_of_domain_standard_q_answer_eval_loader
+  num_workers: 0
+- dataset:
+    max_seq_len: 2048
+    name: wikitext
+    split: test
+  drop_last: false
+  name: wikitext_ppl_eval
+  num_workers: 0
+deepspeed_config:
+  bf16:
+    enabled: true
+  train_batch_size: 64
+  zero_optimization:
+    allgather_bucket_size: 200000000.0
+    contiguous_gradients: true
+    offload_optimizer:
+      device: cpu
+      pin_memory: true
+    overlap_comm: true
+    reduce_bucket_size: true
+    reduce_scatter: true
+    stage: 3
+device_eval_batch_size: 32
+device_train_microbatch_size: 1
+eval_first: false
+eval_interval: 10ep
+eval_subset_num_batches: -1
+experiment:
+  data:
+    augment:
+      doc:
+        do: true
+        method: permute
+        n_sample_per_doc: 2
+    finetune:
+      neg_create_probability: 0.0
+      number_non_attributable_negatives: 0
+    text_data_path: sample-data/biocite-1k/text
+  eval:
+    disable_all_eval: false
+    disable_attribution_eval: false
+    disable_non_attrib_eval: true
+    disable_qa_eval: false
+    icl_eval: false
+    ppl_eval: true
+  experiment:
+    name: seq-training-doc-id-repeat-subset_pretrain
+    output_dir: outputs/experiments
+  model:
+    name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+  train:
+    config_template_path: conf/templates/train_config.yaml
+    cross_doc_attention: false
+    device_eval_batch_size: 32
+    device_train_microbatch_size: 1
+    eval_first: false
+    eval_interval: 10ep
+    finetune_q_a: false
+    finetune_q_a_doc_url: false
+    finetune_q_a_url: false
+    finetune_q_url_a: false
+    loss_type: mask
+    lr: 8.0e-05
+    pretrain: true
+    repeat_url_across_doc: true
+    sequential: true
+    url_location: last
+    url_loss_factor: 1.0
+    weight_decay: 0.02
+global_seed: 17
+global_train_batch_size: 64
+log_to_console: true
+loggers:
+  wandb:
+    project: intrinsic-source-citation
+max_duration: 10ep
+max_seq_len: 2048
+model:
+  checkpoint: null
+  loss:
+    type: mask
+    url_loss_factor: 1.0
+  name: hf_causal_lm
+  pretrained: true
+  pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+ood_url_trie: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/unseen_url_trie.pkl
+optimizer:
+  betas:
+  - 0.9
+  - 0.98
+  eps: 1.0e-06
+  lr: 8.0e-05
+  name: deepspeed_adam
+  weight_decay: 0.02
+precision: amp_bf16
+progress_bar: false
+run_name: seq-training-doc-id-repeat-subset_pretrain
+save_folder: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints
+save_interval: 1ep
+save_num_checkpoints_to_keep: 1
+scheduler:
+  alpha_f: 0.1
+  name: linear_decay_with_warmup
+  t_warmup: 1ep
+seed: 17
+streaming: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/
+text_data_path: sample-data/biocite-1k/text
+tokenizer:
+  kwargs:
+    model_max_length: 2048
+  name: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming//tokenizer
+tokenizer_name: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming//tokenizer
+url_trie: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/url_trie.pkl
+dist_timeout: 600.0
+n_gpus: 1
+device_train_batch_size: 64
+device_train_grad_accum: 64
+n_params: 1100056576
+Starting training...
+2025-04-04 11:50:13,203: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing the engine
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback WandBLogger
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback ConsoleLogger
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback LRMonitor
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback MemoryMonitor
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback RuntimeEstimator
+2025-04-04 11:50:13,204: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback SpeedMonitor
+2025-04-04 11:50:13,205: rank0[4553][MainThread]: DEBUG: composer.core.engine: Closing callback CheckpointSaver
+2025-04-04 11:50:13,205: rank0[4553][MainThread]: DEBUG: composer.core.engine: Post-closing callback WandBLogger

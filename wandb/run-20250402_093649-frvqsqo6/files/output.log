@@ -1,0 +1,521 @@
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/memory_monitor.py:86: UserWarning: The memory monitor only works on CUDA devices, but the model is on cpu.
+  warnings.warn(f'The memory monitor only works on CUDA devices, but the model is on {model_device.type}.')
+/root/miniconda3/lib/python3.8/site-packages/composer/callbacks/speed_monitor.py:120: UserWarning: gpu_flop count not found for None with precision: amp_bf16; MFU cannot be calculated and reported. gpu_flops_available can be manuallyoverridden by setting gpu_flops_available in SpeedMonitor.
+  warnings.warn(
+2025-04-02 09:37:09,535: rank0[1096][MainThread]: INFO: composer.trainer.trainer: Stepping schedulers every batch. To step schedulers every epoch, set `step_schedulers_every_batch=False`.
+2025-04-02 09:37:09,536: rank0[1096][MainThread]: DEBUG: composer.trainer.trainer: Initializing deepspeed
+[2025-04-02 09:37:09,536] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.12.6, git-hash=unknown, git-branch=unknown
+[2025-04-02 09:37:09,536] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-04-02 09:37:10,815] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-04-02 09:37:10,817] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-04-02 09:37:10,818] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-04-02 09:37:10,833] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2025-04-02 09:37:10,833] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2025-04-02 09:37:10,834] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-04-02 09:37:10,834] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-04-02 09:37:11,125] [INFO] [utils.py:791:see_memory_usage] Stage 3 initialize beginning
+[2025-04-02 09:37:11,127] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.15 GB         Max_CA 2 GB
+[2025-04-02 09:37:11,127] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.78 GB, percent = 11.5%
+[2025-04-02 09:37:11,129] [INFO] [stage3.py:127:__init__] Reduce bucket size 1
+[2025-04-02 09:37:11,129] [INFO] [stage3.py:128:__init__] Prefetch bucket size 50,000,000
+[2025-04-02 09:37:11,319] [INFO] [utils.py:791:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-04-02 09:37:11,321] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.15 GB         Max_CA 2 GB
+[2025-04-02 09:37:11,321] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.8 GB, percent = 11.5%
+Parameter Offload: Total persistent parameters: 92160 in 45 params
+[2025-04-02 09:37:11,613] [INFO] [utils.py:791:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-04-02 09:37:11,614] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.18 GB         CA 2.31 GB         Max_CA 2 GB
+[2025-04-02 09:37:11,614] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.84 GB, percent = 11.5%
+[2025-04-02 09:37:11,786] [INFO] [utils.py:791:see_memory_usage] Before creating fp16 partitions
+[2025-04-02 09:37:11,787] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.31 GB         Max_CA 2 GB
+[2025-04-02 09:37:11,787] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.82 GB, percent = 11.5%
+[2025-04-02 09:37:13,704] [INFO] [utils.py:791:see_memory_usage] After creating fp16 partitions: 2
+[2025-04-02 09:37:13,705] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-02 09:37:13,706] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.93 GB, percent = 11.5%
+[2025-04-02 09:37:13,886] [INFO] [utils.py:791:see_memory_usage] Before creating fp32 partitions
+[2025-04-02 09:37:13,887] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-02 09:37:13,888] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 115.93 GB, percent = 11.5%
+[2025-04-02 09:37:15,988] [INFO] [utils.py:791:see_memory_usage] After creating fp32 partitions
+[2025-04-02 09:37:15,989] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-02 09:37:15,990] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 120.03 GB, percent = 11.9%
+[2025-04-02 09:37:16,180] [INFO] [utils.py:791:see_memory_usage] Before initializing optimizer states
+[2025-04-02 09:37:16,181] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-02 09:37:16,181] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 120.03 GB, percent = 11.9%
+[2025-04-02 09:37:20,674] [INFO] [utils.py:791:see_memory_usage] After initializing optimizer states
+[2025-04-02 09:37:20,675] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.06 GB         CA 2.07 GB         Max_CA 2 GB
+[2025-04-02 09:37:20,675] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 132.96 GB, percent = 13.2%
+[2025-04-02 09:37:20,676] [INFO] [stage3.py:479:_setup_for_real_optimizer] optimizer state initialized
+2025-04-02 09:37:22,918: rank0[1096][MainThread]: INFO: composer.trainer.trainer: Setting seed to 17
+2025-04-02 09:37:22,918: rank0[1096][MainThread]: INFO: composer.utils.reproducibility: Setting seed to 17
+2025-04-02 09:37:22,935: rank0[1096][MainThread]: INFO: composer.trainer.trainer: Using precision Precision.AMP_BF16
+******************************
+Config:
+enabled_algorithms/GradientClipping: true
+node_name: unknown because NODENAME environment variable not set
+num_gpus_per_node: 1
+num_nodes: 1
+rank_zero_seed: 17
+******************************
+2025-04-02 09:37:22,937: rank0[1096][MainThread]: DEBUG: composer.trainer.trainer: Spinning the dataloaders
+[2025-04-02 09:37:22,906] [INFO] [utils.py:791:see_memory_usage] After initializing ZeRO optimizer
+[2025-04-02 09:37:22,907] [INFO] [utils.py:792:see_memory_usage] MA 2.06 GB         Max_MA 2.31 GB         CA 2.38 GB         Max_CA 2 GB
+[2025-04-02 09:37:22,908] [INFO] [utils.py:799:see_memory_usage] CPU Virtual Memory:  used = 137.1 GB, percent = 13.6%
+[2025-04-02 09:37:22,908] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedCPUAdam
+[2025-04-02 09:37:22,908] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2025-04-02 09:37:22,908] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-04-02 09:37:22,908] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0], mom=[[0.9, 0.98]]
+[2025-04-02 09:37:22,909] [INFO] [config.py:984:print] DeepSpeedEngine configuration:
+[2025-04-02 09:37:22,910] [INFO] [config.py:988:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-04-02 09:37:22,910] [INFO] [config.py:988:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-04-02 09:37:22,910] [INFO] [config.py:988:print]   amp_enabled .................. False
+[2025-04-02 09:37:22,910] [INFO] [config.py:988:print]   amp_params ................... False
+[2025-04-02 09:37:22,910] [INFO] [config.py:988:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   bfloat16_enabled ............. True
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   checkpoint_parallel_write_pipeline  False
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   checkpoint_tag_validation_enabled  True
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   checkpoint_tag_validation_fail  False
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f0aecb2a610>
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   communication_data_type ...... None
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   curriculum_enabled_legacy .... False
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   curriculum_params_legacy ..... False
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-04-02 09:37:22,911] [INFO] [config.py:988:print]   data_efficiency_enabled ...... False
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   dataloader_drop_last ......... False
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   disable_allgather ............ False
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   dump_state ................... False
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   dynamic_loss_scale_args ...... None
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_enabled ........... False
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_gas_boundary_resolution  1
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_layer_num ......... 0
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_max_iter .......... 100
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_stability ......... 1e-06
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_tol ............... 0.01
+[2025-04-02 09:37:22,912] [INFO] [config.py:988:print]   eigenvalue_verbose ........... False
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   elasticity_enabled ........... False
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   fp16_auto_cast ............... None
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   fp16_enabled ................. False
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   fp16_master_weights_and_gradients  False
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   global_rank .................. 0
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   grad_accum_dtype ............. None
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   gradient_accumulation_steps .. 32
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   gradient_clipping ............ 1.0
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   gradient_predivide_factor .... 1.0
+[2025-04-02 09:37:22,913] [INFO] [config.py:988:print]   graph_harvesting ............. False
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   initial_dynamic_scale ........ 1
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   load_universal_checkpoint .... False
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   loss_scale ................... 1.0
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   memory_breakdown ............. False
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   mics_hierarchial_params_gather  False
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   mics_shard_size .............. -1
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-04-02 09:37:22,914] [INFO] [config.py:988:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   optimizer_legacy_fusion ...... False
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   optimizer_name ............... None
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   optimizer_params ............. None
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   pld_enabled .................. False
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   pld_params ................... False
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   prescale_gradients ........... False
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   scheduler_name ............... None
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   scheduler_params ............. None
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   seq_parallel_communication_data_type  torch.float32
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   sparse_attention ............. None
+[2025-04-02 09:37:22,915] [INFO] [config.py:988:print]   sparse_gradients_enabled ..... False
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   steps_per_print .............. 10
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   train_batch_size ............. 64
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   train_micro_batch_size_per_gpu  2
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   use_data_before_expert_parallel_  False
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   use_node_local_storage ....... False
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   wall_clock_breakdown ......... False
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   weight_quantization_config ... None
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   world_size ................... 1
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   zero_allow_untested_optimizer  True
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=1 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=200000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2025-04-02 09:37:22,916] [INFO] [config.py:988:print]   zero_enabled ................. True
+[2025-04-02 09:37:22,917] [INFO] [config.py:988:print]   zero_force_ds_cpu_optimizer .. True
+[2025-04-02 09:37:22,917] [INFO] [config.py:988:print]   zero_optimization_stage ...... 3
+[2025-04-02 09:37:22,917] [INFO] [config.py:974:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    },
+    "train_batch_size": 64,
+    "zero_optimization": {
+        "allgather_bucket_size": 2.000000e+08,
+        "contiguous_gradients": true,
+        "offload_optimizer": {
+            "device": "cpu",
+            "pin_memory": true
+        },
+        "overlap_comm": true,
+        "reduce_bucket_size": true,
+        "reduce_scatter": true,
+        "stage": 3
+    },
+    "gradient_clipping": 1.0,
+    "gradient_accumulation_steps": 32,
+    "train_micro_batch_size_per_gpu": 2,
+    "zero_allow_untested_optimizer": true
+}
+Logging config...
+algorithms:
+  gradient_clipping:
+    clipping_threshold: 1.0
+    clipping_type: norm
+callbacks:
+  lr_monitor: {}
+  memory_monitor: {}
+  runtime_estimator: {}
+  speed_monitor:
+    window_size: 10
+console_log_interval: 50ba
+cross_doc_attention: false
+dataloaders:
+- dataset:
+    local: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/
+    max_seq_len: 2048
+    split: train
+  drop_last: false
+  name: train_loader_docs
+  num_workers: 0
+deepspeed_config:
+  bf16:
+    enabled: true
+  train_batch_size: 64
+  zero_optimization:
+    allgather_bucket_size: 200000000.0
+    contiguous_gradients: true
+    offload_optimizer:
+      device: cpu
+      pin_memory: true
+    overlap_comm: true
+    reduce_bucket_size: true
+    reduce_scatter: true
+    stage: 3
+device_eval_batch_size: 32
+device_train_microbatch_size: 2
+eval_first: false
+eval_interval: 1
+eval_subset_num_batches: -1
+experiment:
+  data:
+    augment:
+      doc:
+        do: true
+        method: permute
+        n_sample_per_doc: 2
+    finetune:
+      neg_create_probability: 0.0
+      number_non_attributable_negatives: 0
+    text_data_path: sample-data/biocite-1k/text
+  eval:
+    disable_all_eval: true
+    disable_attribution_eval: false
+    disable_non_attrib_eval: true
+    disable_qa_eval: false
+    icl_eval: false
+    ppl_eval: true
+  experiment:
+    name: seq-training-doc-id-repeat-subset_pretrain
+    output_dir: outputs/experiments
+  model:
+    name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+  train:
+    config_template_path: conf/templates/train_config.yaml
+    cross_doc_attention: false
+    device_eval_batch_size: 32
+    device_train_microbatch_size: 2
+    eval_first: false
+    finetune_q_a: false
+    finetune_q_a_doc_url: false
+    finetune_q_a_url: false
+    finetune_q_url_a: false
+    loss_type: mask
+    lr: 8.0e-05
+    pretrain: true
+    repeat_url_across_doc: true
+    sequential: true
+    url_location: last
+    url_loss_factor: 1.0
+    weight_decay: 0.02
+global_seed: 17
+global_train_batch_size: 64
+log_to_console: true
+loggers:
+  wandb:
+    project: intrinsic-source-citation
+max_duration: 10ep
+max_seq_len: 2048
+model:
+  checkpoint: null
+  loss:
+    type: mask
+    url_loss_factor: 1.0
+  name: hf_causal_lm
+  pretrained: true
+  pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+ood_url_trie: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/unseen_url_trie.pkl
+optimizer:
+  betas:
+  - 0.9
+  - 0.98
+  eps: 1.0e-06
+  lr: 8.0e-05
+  name: deepspeed_adam
+  weight_decay: 0.02
+precision: amp_bf16
+progress_bar: false
+run_name: seq-training-doc-id-repeat-subset_pretrain
+save_folder: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints
+save_interval: 1ep
+save_num_checkpoints_to_keep: 1
+scheduler:
+  alpha_f: 0.1
+  name: linear_decay_with_warmup
+  t_warmup: 1ep
+seed: 17
+streaming: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/
+text_data_path: sample-data/biocite-1k/text
+tokenizer:
+  kwargs:
+    model_max_length: 2048
+  name: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming//tokenizer
+tokenizer_name: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming//tokenizer
+url_trie: outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/data/streaming/url_trie.pkl
+dist_timeout: 600.0
+n_gpus: 1
+device_train_batch_size: 64
+device_train_grad_accum: 32
+n_params: 1100056576
+Starting training...
+[epoch=1][batch=1/6]:
+	 Train time/epoch: 0
+	 Train time/batch: 0
+	 Train time/sample: 0
+	 Train time/batch_in_epoch: 0
+	 Train time/sample_in_epoch: 0
+	 Train time/token: 0
+	 Train time/token_in_epoch: 0
+	 Train memory/allocated_mem: 3.3410
+	 Train memory/active_mem: 3.3410
+	 Train memory/inactive_mem: 0.0333
+	 Train memory/reserved_mem: 21.0180
+	 Train memory/alloc_retries: 0
+	 Train trainer/device_train_microbatch_size: 2
+	 Train loss/train/total: 3.1642
+	 Train lr-DeepSpeedZeroOptimizer_Stage3/group0: 0.0000
+	 Train time/train: 0.0076
+	 Train time/val: 0.0000
+	 Train time/total: 0.0076
+2025-04-02 09:39:54,575: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py:1802: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2025-04-02 09:39:58,246] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:39:58,259] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmp238ll_0u/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:39:58,259] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp238ll_0u/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:39:58,274] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp238ll_0u/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:39:58,275] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp238ll_0u/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 09:40:11,538] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp238ll_0u/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:40:11,540] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmp238ll_0u/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:40:11,542] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 09:42:33,074] [INFO] [logging.py:96:log_dist] [Rank 0] step=10, skipped=0, lr=[7.6e-05], mom=[[0.9, 0.98]]
+[2025-04-02 09:42:33,075] [INFO] [timer.py:260:stop] epoch=0/micro_step=320/global_step=10, RunningAvgSamplesPerSec=2.4355859733128584, CurrSamplesPerSec=2.6926697395693693, MemAllocated=3.62GB, MaxMemAllocated=17.35GB
+2025-04-02 09:42:58,252: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:42:58,848] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:42:58,857] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpf85iv_dp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:42:58,857] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpf85iv_dp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:42:58,873] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpf85iv_dp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:42:58,873] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpf85iv_dp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 09:43:09,816] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpf85iv_dp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:43:09,817] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpf85iv_dp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:43:09,818] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+2025-04-02 09:45:51,777: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:45:51,792] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:45:51,799] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpf3khagke/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:45:51,799] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpf3khagke/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:45:51,810] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpf3khagke/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:45:51,811] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpf3khagke/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 09:46:02,988] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpf3khagke/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:46:02,989] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpf3khagke/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:46:02,990] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 09:47:58,379] [INFO] [logging.py:96:log_dist] [Rank 0] step=20, skipped=0, lr=[6.133333333333334e-05], mom=[[0.9, 0.98]]
+[2025-04-02 09:47:58,380] [INFO] [timer.py:260:stop] epoch=0/micro_step=640/global_step=20, RunningAvgSamplesPerSec=2.4849282783154276, CurrSamplesPerSec=2.6438769362991077, MemAllocated=3.62GB, MaxMemAllocated=17.36GB
+2025-04-02 09:48:53,624: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:48:53,651] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:48:53,660] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpuf_cwsy8/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:48:53,660] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpuf_cwsy8/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:48:53,675] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpuf_cwsy8/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:48:53,675] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpuf_cwsy8/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 09:49:05,179] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpuf_cwsy8/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:49:05,181] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpuf_cwsy8/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:49:05,182] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+2025-04-02 09:51:55,630: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:51:55,653] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:51:55,662] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmp19kfkk_h/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:51:55,662] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp19kfkk_h/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:51:55,676] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp19kfkk_h/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:51:55,677] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp19kfkk_h/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 09:52:06,845] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp19kfkk_h/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:52:06,845] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmp19kfkk_h/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:52:06,847] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 09:53:32,639] [INFO] [logging.py:96:log_dist] [Rank 0] step=30, skipped=0, lr=[4.6666666666666665e-05], mom=[[0.9, 0.98]]
+[2025-04-02 09:53:32,640] [INFO] [timer.py:260:stop] epoch=0/micro_step=960/global_step=30, RunningAvgSamplesPerSec=2.486401271446573, CurrSamplesPerSec=2.697481774129347, MemAllocated=3.62GB, MaxMemAllocated=17.36GB
+[2025-04-02 09:54:49,598] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:54:49,607] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpjqq0xzyp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:54:49,607] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpjqq0xzyp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:54:49,622] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpjqq0xzyp/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:54:49,623] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpjqq0xzyp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+2025-04-02 09:54:49,572: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:54:59,873] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpjqq0xzyp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:54:59,874] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpjqq0xzyp/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:54:59,875] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 09:57:44,030] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 09:57:44,040] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpg8ujx0qw/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 09:57:44,040] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpg8ujx0qw/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 09:57:44,054] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpg8ujx0qw/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 09:57:44,055] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpg8ujx0qw/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+2025-04-02 09:57:44,007: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 09:57:54,978] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpg8ujx0qw/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 09:57:54,980] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpg8ujx0qw/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 09:57:54,981] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 09:58:55,333] [INFO] [logging.py:96:log_dist] [Rank 0] step=40, skipped=0, lr=[3.2000000000000005e-05], mom=[[0.9, 0.98]]
+[2025-04-02 09:58:55,333] [INFO] [timer.py:260:stop] epoch=0/micro_step=1280/global_step=40, RunningAvgSamplesPerSec=2.5116694656723646, CurrSamplesPerSec=2.6846576041503565, MemAllocated=3.63GB, MaxMemAllocated=17.37GB
+[2025-04-02 10:00:42,635] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 10:00:42,644] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmpz2vu28e3/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 10:00:42,644] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpz2vu28e3/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 10:00:42,659] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpz2vu28e3/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 10:00:42,660] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmpz2vu28e3/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+2025-04-02 10:00:42,609: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 10:00:54,037] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmpz2vu28e3/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 10:00:54,039] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmpz2vu28e3/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 10:00:54,040] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[epoch=9][batch=2/6]:
+	 Train time/batch: 49
+	 Train time/sample: 2872
+	 Train time/batch_in_epoch: 1
+	 Train time/sample_in_epoch: 64
+	 Train time/token: 2933937
+	 Train time/token_in_epoch: 65280
+	 Train memory/allocated_mem: 3.3450
+	 Train memory/active_mem: 3.3450
+	 Train memory/inactive_mem: 0.0398
+	 Train memory/reserved_mem: 33.3070
+	 Train memory/alloc_retries: 0
+	 Train trainer/device_train_microbatch_size: 2
+	 Train loss/train/total: 0.3560
+	 Train lr-DeepSpeedZeroOptimizer_Stage3/group0: 0.0000
+	 Train time/remaining_estimate: 0.0824
+	 Train time/train: 0.4116
+	 Train time/val: 0.0000
+	 Train time/total: 0.4116
+	 Train time/epoch: 8
+	 Train throughput/batches_per_sec: 0.0333
+	 Train throughput/samples_per_sec: 1.9126
+	 Train throughput/device/batches_per_sec: 0.0333
+	 Train throughput/device/samples_per_sec: 1.9126
+	 Train throughput/tokens_per_sec: 3917.0745
+	 Train throughput/device/tokens_per_sec: 3917.0745
+[2025-04-02 10:03:38,858] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 10:03:38,867] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmp8nz2fxxt/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 10:03:38,867] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp8nz2fxxt/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 10:03:38,883] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp8nz2fxxt/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 10:03:38,884] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp8nz2fxxt/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+2025-04-02 10:03:38,834: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 10:03:49,576] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp8nz2fxxt/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 10:03:49,576] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmp8nz2fxxt/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 10:03:49,577] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+[2025-04-02 10:04:26,677] [INFO] [logging.py:96:log_dist] [Rank 0] step=50, skipped=0, lr=[1.7333333333333336e-05], mom=[[0.9, 0.98]]
+[2025-04-02 10:04:26,678] [INFO] [timer.py:260:stop] epoch=0/micro_step=1600/global_step=50, RunningAvgSamplesPerSec=2.5134568619012665, CurrSamplesPerSec=2.4125096440456297, MemAllocated=3.62GB, MaxMemAllocated=17.37GB
+2025-04-02 10:06:52,629: rank0[1096][MainThread]: DEBUG: composer.utils.checkpoint: Saving checkpoint to outputs/experiments/seq-training-doc-id-repeat-subset_pretrain/checkpoints/ep{epoch}-ba{batch}-rank{rank}.pt.tar
+[2025-04-02 10:06:53,990] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint deepspeed is about to be saved!
+[2025-04-02 10:06:53,999] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: /tmp/tmp4uuaxmwc/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-04-02 10:06:54,000] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp4uuaxmwc/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-04-02 10:06:54,019] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp4uuaxmwc/deepspeed/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-04-02 10:06:54,021] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving /tmp/tmp4uuaxmwc/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-04-02 10:07:04,481] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved /tmp/tmp4uuaxmwc/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-04-02 10:07:04,481] [INFO] [engine.py:3431:_save_zero_checkpoint] zero checkpoint saved /tmp/tmp4uuaxmwc/deepspeed/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-04-02 10:07:04,482] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint deepspeed is ready now!
+Done.
+[epoch=10][batch=6/6]:
+	 Train time/batch: 60
+	 Train time/sample: 3510
+	 Train time/batch_in_epoch: 0
+	 Train time/sample_in_epoch: 0
+	 Train time/token: 3554673
+	 Train time/token_in_epoch: 327296
+	 Train memory/allocated_mem: 2.7877
+	 Train memory/active_mem: 2.7877
+	 Train memory/inactive_mem: 0.0392
+	 Train memory/reserved_mem: 33.3070
+	 Train memory/alloc_retries: 0
+	 Train trainer/device_train_microbatch_size: 2
+	 Train loss/train/total: 0.2231
+	 Train lr-DeepSpeedZeroOptimizer_Stage3/group0: 0.0000
+	 Train time/remaining_estimate: 0.0000
+	 Train throughput/batches_per_sec: 0.0347
+	 Train throughput/samples_per_sec: 1.9928
+	 Train throughput/device/batches_per_sec: 0.0347
+	 Train throughput/device/samples_per_sec: 1.9928
+	 Train throughput/tokens_per_sec: 4081.2201
+	 Train throughput/device/tokens_per_sec: 4081.2201
+	 Train time/train: 0.4916
+	 Train time/val: 0.0000
+	 Train time/total: 0.4916
+	 Train time/epoch: 10
+2025-04-02 10:07:25,441: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing the engine
+2025-04-02 10:07:25,441: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback WandBLogger
+2025-04-02 10:07:25,441: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback ConsoleLogger
+2025-04-02 10:07:25,441: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback LRMonitor
+2025-04-02 10:07:25,442: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback MemoryMonitor
+2025-04-02 10:07:25,442: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback RuntimeEstimator
+2025-04-02 10:07:25,442: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback SpeedMonitor
+2025-04-02 10:07:25,442: rank0[1096][MainThread]: DEBUG: composer.core.engine: Closing callback CheckpointSaver
+2025-04-02 10:07:25,442: rank0[1096][MainThread]: DEBUG: composer.core.engine: Post-closing callback WandBLogger
