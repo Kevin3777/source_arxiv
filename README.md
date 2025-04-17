@@ -80,6 +80,11 @@ conf/ours_doc_id_end.yaml训练评估结果：
 ![alt text](pictures/end训练参数.png)
 ![alt text](pictures/end评估.png)
 
+模型checkpoints（只训练5/6词epoch，建议重新训练即可）：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
+预处理好的数据集：链接同上
+数据集的结构：
+![alt text](pictures/dataset.png)
+
 
 
 
