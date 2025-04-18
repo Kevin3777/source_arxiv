@@ -229,8 +229,27 @@ eval:
   use_ais: false
 ```
 
+# quick train and evaluation
 Training evaluation results for conf/ours_doc_id_begin.yaml：
-![alt text](pictures/begin训练参数.png)
+
+| Parameter | Value |
+|-----------|-------|
+| Model | TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T |
+| Number of Parameters | 1,100,056,576 (about 1.1B) |
+| Optimizer | DeepSpeedCPUAdam (ZeRO Stage 3) |
+| Learning Rate | 8.0e-05 (initial) |
+| Learning Rate Scheduler | Linear decay with warmup |
+| Warmup Steps | 1 epoch |
+| Batch Processing Size | Full batch: 80, devices: 80, micro-batch: 2 |
+| Gradient Accumulation Steps | 40 |
+| Precision | amp_bf16 (mixed precision, BF16) |
+| Maximum Sequence Length | 2048 |
+| Total Training Cycles | 10 |
+| Weight Decay | 0.02 |
+| Gradient Clipping | 1.0 |
+| Seeds | 17 |
+
+
 ![alt text](pictures/begin评估.png)
 
 Training evaluation results for conf/ours_doc_id_end.yaml：
