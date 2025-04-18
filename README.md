@@ -230,7 +230,7 @@ eval:
 ```
 
 # quick train and evaluation
-Training evaluation results for conf/ours_doc_id_begin.yaml：
+Training evaluation results for **conf/ours_doc_id_begin.yaml**：
 
 | Parameter | Value |
 |-----------|-------|
@@ -250,11 +250,82 @@ Training evaluation results for conf/ours_doc_id_begin.yaml：
 | Seeds | 17 |
 
 
-![alt text](pictures/begin评估.png)
+| Cycle | Batch/Total Batch | Training Loss | QA-EM (In-domain) | QA-F1 (In-domain) | QA-EM (Out-of-domain) | QA-F1 (Out-of-domain) |
+|-------|------------------|--------------|------------------|-------------------|----------------------|----------------------|
+| 1 | 50/134 | 1.7855 | - | - | - | - |
+| 1 | 100/134 | 1.6113 | - | - | - | - |
+| 1 | 134/134 | - | 0.0000 | 0.1529 | 0.0000 | 0.1529 |
+| 2 | 16/134 | 1.1817 | - | - | - | - |
+| 2 | 66/134 | 1.0323 | - | - | - | - |
+| 2 | 116/134 | 0.8217 | - | - | - | - |
+| 2 | 134/134 | - | 0.0000 | 0.1638 | 0.0000 | 0.1638 |
+| 3 | 32/134 | 0.3576 | - | - | - | - |
+| 3 | 82/134 | 0.3670 | - | - | - | - |
+| 3 | 132/134 | 0.2652 | - | - | - | - |
+| 3 | 134/134 | - | 0.0000 | 0.1845 | 0.0000 | 0.1845 |
+| 4 | 48/134 | 0.1173 | - | - | - | - |
+| 4 | 98/134 | 0.1224 | - | - | - | - |
+| 4 | 134/134 | - | 0.0000 | 0.1982 | 0.0000 | 0.1982 |
+| 5 | 14/134 | 0.0555 | - | - | - | - |
+| 5 | 64/134 | 0.0648 | - | - | - | - |
+| 5 | 114/134 | 0.0504 | - | - | - | - |
+| 5 | 134/134 | - | 0.0000 | 0.2031 | 0.0000 | 0.2031 |
 
-Training evaluation results for conf/ours_doc_id_end.yaml：
-![alt text](pictures/end训练参数.png)
-![alt text](pictures/end评估.png)
+Key Observations:
+- Training loss decreases from 1.7855 in the first cycle to 0.0504 in the fifth cycle, indicating the model is effectively learning.
+- QA-F1 score gradually improves from 0.1529 to 0.2031, showing performance enhancement.
+- QA-EM (exact match) remains consistently at 0.0000, suggesting the model struggles with exact matching.
+- The performance metrics are similar for both in-domain and out-of-domain evaluations.
+
+This model was optimized using DeepSpeed ZeRO Stage 3, demonstrating efficient memory management and learning rate scheduling during training.
+
+
+Training evaluation results for **conf/ours_doc_id_end.yaml**：
+| Parameter | Value |
+|-----------|-------|
+| Model | TinyLlama-1.1B-intermediate-step-1431k-3T |
+| Task | Reference/Retrospective Training (Based on Document ID) |
+| Hardware | CPU Training (DeepSpeed ZeRO Stage 3 Optimization) |
+| Full Batch Training Size | 80 |
+| Device Training Micro-batch Size | 2 |
+| Gradient Accumulation Steps | 40 |
+| Precision | Mixed Precision (bfloat16) |
+| Initial Learning Rate | 8e-05 |
+| Learning Rate Scheduler | Linear Decay (1 epoch warmup) |
+| Optimizer | DeepSpeed Adam (Weight Decay: 0.02) |
+| Planned Training Length | 10 epochs |
+| Sequence Length | 2048 tokens |
+| Loss Type | Loss Based on Sequence Coding |
+
+
+| Training Results |  |  |
+|--------------|--------------|-----------------|
+| **Cycle** | **Initial Loss** | **Final Loss** | **Learning Rate Change** |
+| 1st Cycle | ~2.22 | ~1.65 | Increased to ~8e-05 |
+| 2nd Cycle | ~1.27 | ~0.98 | Started decreasing from ~8e-05 |
+| 3rd Cycle | ~0.42 | ~0.37 | Continued Decreasing |
+| 4th Cycle | ~0.11 | ~0.14 | Continued Decreasing |
+| 5th Cycle | ~0.05 | ~0.06 | Decreased to ~5.2e-05 |
+
+| Evaluation Results |  |  |
+|-------------------|----------------------|----------------------|
+| **Evaluation Timing** | **QA Exact Match (EM)** | **QA F1 Score (In-domain)** | **QA F1 Score (Out-of-domain)** |
+| After 3rd Cycle | 0.0 | 0.1810 | 0.1810 |
+| After 6th Cycle | 0.0 | 0.2033 | 0.2033 |
+
+**Key Observations:**
+
+1. Loss decreased significantly over the first few cycles, stabilizing at a very low level (around 0.05) by the 5th cycle, indicating good model convergence.
+
+2. Exact Match (EM) metric remained at 0.0, suggesting difficulty in generating exact matches.
+
+3. F1 scores showed modest improvement, increasing from 0.181 to 0.203.
+
+4. DeepSpeed CPU training was successful, though with high memory consumption (around 160GB CPU memory).
+
+5. Model performance was consistent across in-domain and out-of-domain data, demonstrating generalization capability.
+
+
 
 model checkpoints：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
 
