@@ -11,7 +11,7 @@ just replace conf/ours_doc_id_begin.yaml（such as conf/ours_doc_id_end.yaml）
 
 The configuration file is divided into two parts:
 
-conf/ours_doc_id_begin.yaml与conf\templates\train_config.yaml
+conf/ours_doc_id_begin.yaml and conf\templates\train_config.yaml
 
 The default training parameter configuration is conf\templates\train_config.yaml，Parameter configurations not mentioned in conf/ours_doc_id_begin.yaml, use the parameters fromtrain_config.yaml
 
