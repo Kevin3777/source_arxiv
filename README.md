@@ -351,9 +351,3 @@ To eliminate the need to run many consecutive scripts, I designed the code such 
 
 
 
-
-booktitle={First Conference on Language Modeling},
-year={2024},
-url={https://openreview.net/forum?id=UPyWLwciYz}
-}
-```
