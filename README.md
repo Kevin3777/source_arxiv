@@ -1,26 +1,26 @@
-# 运行代码
-在autodl已经配置好了环境，并且做了代码适配，环境比较麻烦，修改代码前可以先备份：西北B区 / 710机，西北B区 / 274机。
+# run code
+The environment has already been configured and adapted to the code in autodl, which can be quite complicated. Before modifying the code, you can backup the Northwest B zone/710 machine and Northwest B zone/274 machine.
 
-以下的配置文件显存占用为28GB左右，要加快训练速度要换更好的机器。
+The following configuration file occupies about 28GB of video memory. To speed up training, it is necessary to switch to a better machine.
 
 ```python
 source /etc/network_turbo
 python run_experiment.py conf/ours_doc_id_begin.yaml
 ```
-替换conf/ours_doc_id_begin.yaml即可（如conf/ours_doc_id_end.yaml）
+just replace conf/ours_doc_id_begin.yaml（such as conf/ours_doc_id_end.yaml）
 
-配置文件分为两个部分：
+The configuration file is divided into two parts:
 
 conf/ours_doc_id_begin.yaml与conf\templates\train_config.yaml
 
-conf\templates\train_config.yaml为默认的训练参数配置，没有在conf/ours_doc_id_begin.yaml中提及的参数配置默认使用train_config.yaml中的参数
+The default training parameter configuration is conf\templates\train_config.yaml，Parameter configurations not mentioned in conf/ours_doc_id_begin.yaml, use the parameters fromtrain_config.yaml
 
 ```yaml
 # Pretrain a gpt2 style model
 text_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain
 streaming: outputs/experiments/arxiv-citation-doc-id-end/data/streaming/
 tokenizer_name: ${streaming}/tokenizer
-max_seq_len: 1024  # 根据模型和数据集调整
+max_seq_len: 1024  
 global_seed: 17
 url_trie: ${streaming}/url_trie.pkl
 ood_url_trie: ${streaming}/unseen_url_trie.pkl
@@ -33,17 +33,17 @@ cross_doc_attention: false
 model:
   name: hf_causal_lm
   pretrained_model_name_or_path: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
-  pretrained: true  # 决定是否进行预训练，预训练耗时不长，两三分钟，可以不修改
+  pretrained: true  # Decide whether to conduct pre training. Pre training takes a short time of two to three minutes and can be left unchanged
   loss:
-    type: mask  # 与配置文件中的 loss_type 对应
+    type: mask  # Corresponding to the loss_type in the configuration file
     url_loss_factor: 1.0
   
 
   
   ckpt_dir: outputs/experiments/arxiv-citation-doc-id-end/checkpoints
-  # checkpoint: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints/latest"  # 或者特定的检查点路径（这里可以在间断点上进行断点训练）
+  # checkpoint: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints/latest"  # Specific checkpoint paths (where breakpoint training can be performed on breakpoints)
     
-# Tokenizer 部分保持不变
+# Tokenizer 
 # Tokenizer
 tokenizer:
   name: ${tokenizer_name}
@@ -86,7 +86,6 @@ dataloaders:
     drop_last: false
     num_workers: 0
 
-# 其他部分保持不变
 # Optimization
 scheduler:
   name: linear_decay_with_warmup
@@ -111,12 +110,12 @@ max_duration: 10ep #
 eval_interval: 3ep
 eval_first: false
 eval_subset_num_batches: -1
-global_train_batch_size: 64 #修改，原来为 128
+global_train_batch_size: 64 # 128 initially
 
 # System 
 seed: ${global_seed}
-device_eval_batch_size: 64      # 评估批次
-device_train_microbatch_size: 4  # 每次训练送入8个样本
+device_eval_batch_size: 64      # Evaluate Batch
+device_train_microbatch_size: 4  # Send in 4 samples for each training session
 
 # device_train_microbatch_size: auto
 precision: amp_bf16
@@ -165,11 +164,11 @@ loggers:
 # Checkpoint to local filesystem or remote object store
 save_interval: 1ep
 save_num_checkpoints_to_keep: 1 
-save_folder: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints"  #在此可以保留模型训练的checkpoints
+save_folder: "outputs/experiments/arxiv-citation-doc-id-end/checkpoints"  # You can keep the checkpoints for model training here
 ```
 
 
-参数若在conf/ours_doc_id_begin.yaml中有定义，则使用conf/ours_doc_id_begin.yaml的配置
+If the parameter is defined in conf/ours_doc_id_begin. yaml, use the configuration of conf/ours_doc_id_begin. yaml
 
 ```yaml
 # Experiment Configuration
@@ -179,7 +178,7 @@ experiment:
   output_dir: outputs/experiments/
 
 data:
-  text_data_path: dataset/ours/pretrain  # 指向预训练数据集目录
+  text_data_path: dataset/ours/pretrain  # Point to the directory of pre training datasets
   train_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/pretrain/train
   qa_data_path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours
   augment:
@@ -195,8 +194,8 @@ model:
   name: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
 
 train:
-  url_location: first  # URL 位置在文档开头
-  pretrain: true  # 决定是否进行预训练，预训练耗时不长，两三分钟，可以不修改
+  url_location: first  # The URL location is at the beginning of the document
+  pretrain: true  # Decide whether to conduct pre training. Pre training takes a short time of two to three minutes and can be left unchanged
   sequential: false
   finetune_q_url_a: false
   repeat_url_across_doc: false
@@ -205,20 +204,20 @@ train:
   finetune_q_a_doc_url: false
   q_a_url_predict_url_only: false
   
-  # 损失和注意力配置
+  # Loss and attention allocation
   cross_doc_attention: false
   url_loss_factor: 1.0
   loss_type: mask
   config_template_path: conf/templates/train_config.yaml
   
-  # 训练参数
+  # Training parameters
   device_eval_batch_size: 40
   device_train_microbatch_size: 2
   eval_first: false
   weight_decay: 0.02
   lr: 8.0e-5
   max_duration: 10ep
-  save_folder: "outputs/experiments/arxiv-citation-doc-id-begin/checkpoints" #在此可以保留模型训练的checkpoints
+  save_folder: "outputs/experiments/arxiv-citation-doc-id-begin/checkpoints" # You can keep the checkpoints for model training here
 
 eval:  
   disable_qa_eval: false
@@ -230,19 +229,19 @@ eval:
   use_ais: false
 ```
 
-conf/ours_doc_id_begin.yaml训练评估结果：
+Training evaluation results for conf/ours_doc_id_begin.yaml：
 ![alt text](pictures/begin训练参数.png)
 ![alt text](pictures/begin评估.png)
 
-conf/ours_doc_id_end.yaml训练评估结果：
+Training evaluation results for conf/ours_doc_id_end.yaml：
 ![alt text](pictures/end训练参数.png)
 ![alt text](pictures/end评估.png)
 
-模型checkpoints（只训练5/6词epoch，建议重新训练即可）：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
+model checkpoints：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
 
-预处理好的数据集：链接同上
+Preprocessed dataset: link as above
 
-数据集的结构（只需关注ours即可）：
+The structure of the dataset (just focus on ours)：
 ![alt text](pictures/dataset.png)
 
 
