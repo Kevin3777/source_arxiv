@@ -13,7 +13,7 @@ The configuration file is divided into two parts:
 
 conf/ours_doc_id_begin.yaml and conf\templates\train_config.yaml
 
-The default training parameter configuration is conf\templates\train_config.yaml，Parameter configurations not mentioned in conf/ours_doc_id_begin.yaml, use the parameters fromtrain_config.yaml
+The default training parameter configuration is conf\templates\train_config.yaml，Parameter configurations not mentioned in conf/ours_doc_id_begin.yaml, use the parameters from train_config.yaml
 
 ```yaml
 # Pretrain a gpt2 style model
@@ -65,7 +65,7 @@ dataloaders:
     drop_last: false
     num_workers: 0
   
-  # 评估数据加载器部分
+  # Evaluate the data loader section
   - name: in_domain_standard_q_answer_eval_loader
     dataset:
       path: /root/autodl-tmp/intrinsic-source-citation/dataset/ours/qa
