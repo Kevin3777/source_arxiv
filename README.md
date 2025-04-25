@@ -331,6 +331,8 @@ model checkpoints(old)：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-
 
 model checkpoints(new)：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin_new/tree/main/checkpoints
 
+end: https://huggingface.co/Kevin3777/arxiv-end-new/tree/main
+
 Preprocessed dataset: link as above
 
 The structure of the dataset (just focus on ours)：
