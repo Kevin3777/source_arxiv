@@ -327,8 +327,8 @@ Training evaluation results for **conf/ours_doc_id_end.yaml**：
 
 
 # model checkpoints
-model checkpoints：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
-
+model checkpoints(old)：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin/tree/main
+model checkpoints(new)：https://huggingface.co/Kevin3777/arxiv-citation-doc-id-begin_new/tree/main/checkpoints
 Preprocessed dataset: link as above
 
 The structure of the dataset (just focus on ours)：
