@@ -1,0 +1,648 @@
+question,reference,prediction
+Summarize the paper: Studying Classifier(-Free) Guidance From a Classifier-Centric Perspective,"Classifier-free guidance has become a staple for conditional generation with
+denoising diffusion models. However, a comprehensive understanding of
+classifier-free guidance is still missing. In this work, we carry out an
+empirical study to provide a fresh perspective on classifier-free guidance.
+Concretely, instead of solely focusing on classifier-free guidance, we trace
+back to the root, i.e., classifier guidance, pinpoint the key assumption for
+the derivation, and conduct a systematic study to understand the role of the
+classifier. We find that both classifier guidance and classifier-free guidance
+achieve conditional generation by pushing the denoising diffusion trajectories
+away from decision boundaries, i.e., areas where conditional information is
+usually entangled and is hard to learn. Based on this classifier-centric
+understanding, we propose a generic postprocessing step built upon
+flow-matching to shrink the gap between the learned distribution for a
+pre-trained denoising diffus","Classifier-free guidance has become a staple for conditional generation with
+denoising diffusion models. However, a comprehensive understanding of
+classifier-free guidance is still missing. In this work, we carry out an
+empirical study to provide a fresh perspective on classifier-free guidance.
+Concretely, instead of solely focusing on classifier-free guidance, we trace
+back to the root, i.e., classifier guidance, pinpoint the key assumption for
+the derivation, and conduct a systematic study to understand the role of the
+classifier. We find that both classifier guidance and classifier-free guidance
+achieve conditional generation by pushing the denoising"
+Summarize the paper: A Frustratingly Simple Yet Highly Effective Attack Baseline: Over 90% Success Rate Against the Strong Black-box Models of GPT-4.5/4o/o1,"Despite promising performance on open-source large vision-language models
+(LVLMs), transfer-based targeted attacks often fail against black-box
+commercial LVLMs. Analyzing failed adversarial perturbations reveals that the
+learned perturbations typically originate from a uniform distribution and lack
+clear semantic details, resulting in unintended responses. This critical
+absence of semantic information leads commercial LVLMs to either ignore the
+perturbation entirely or misinterpret its embedded semantics, thereby causing
+the attack to fail. To overcome these issues, we notice that identifying core
+semantic objects is a key objective for models trained with various datasets
+and methodologies. This insight motivates our approach that refines semantic
+clarity by encoding explicit semantic details within local regions, thus
+ensuring interoperability and capturing finer-grained features, and by
+concentrating modifications on semantically rich areas rather than applying
+them uniformly. To a","Despite promising performance on open-source large vision-language models
+(LVLMs), transfer-based targeted attacks often fail against black-box
+commercial LVLMs. Analyzing failed adversarial perturbations reveals that the
+learned perturbations typically originate from a uniform distribution and lack
+clear semantic details, resulting in unintended responses. This critical
+absence of semantic information leads commercial LVLMs to either ignore the
+perturbation entirely or misinterpret its embedded semantics, thereby causing
+the attack to fail. To overcome these issues, we notice that identifying core
+semantic objects is a key objective for models trained with various datasets
+and methodologies"
+Summarize the paper: Uncertainty in Action: Confidence Elicitation in Embodied Agents,"Expressing confidence is challenging for embodied agents navigating dynamic
+multimodal environments, where uncertainty arises from both perception and
+decision-making processes. We present the first work investigating embodied
+confidence elicitation in open-ended multimodal environments. We introduce
+Elicitation Policies, which structure confidence assessment across inductive,
+deductive, and abductive reasoning, along with Execution Policies, which
+enhance confidence calibration through scenario reinterpretation, action
+sampling, and hypothetical reasoning. Evaluating agents in calibration and
+failure prediction tasks within the Minecraft environment, we show that
+structured reasoning approaches, such as Chain-of-Thoughts, improve confidence
+calibration. However, our findings also reveal persistent challenges in
+distinguishing uncertainty, particularly under abductive settings, underscoring
+the need for more sophisticated embodied confidence elicitation methods.","Expressing confidence is challenging for embodied agents navigating dynamic
+multimodal environments, where uncertainty arises from both perception and
+decision-making processes. We present the first work investigating embodied
+confidence elicitation in open-ended multimodal environments. We introduce
+Elicitation Policies, which structure confidence assessment across inductive,
+deductive, and abductive reasoning, along with Execution Policies, which
+enhance confidence calibration through scenario reinterpretation, action
+sampling, and hypothetical reasoning. Evaluating agents in calibration and
+failure prediction tasks within the Minecraft environment, we show that"
+Summarize the paper: SciVerse: Unveiling the Knowledge Comprehension and Visual Reasoning of LMMs on Multi-modal Scientific Problems,"The rapid advancement of Large Multi-modal Models (LMMs) has enabled their
+application in scientific problem-solving, yet their fine-grained capabilities
+remain under-explored. In this paper, we introduce SciVerse, a multi-modal
+scientific evaluation benchmark to thoroughly assess LMMs across 5,735 test
+instances in five distinct versions. We aim to investigate three key dimensions
+of LMMs: scientific knowledge comprehension, multi-modal content
+interpretation, and Chain-of-Thought (CoT) reasoning. To unveil whether LMMs
+possess sufficient scientific expertise, we first transform each problem into
+three versions containing different levels of knowledge required for solving,
+i.e., Knowledge-free, -lite, and -rich. Then, to explore how LMMs interpret
+multi-modal scientific content, we annotate another two versions, i.e.,
+Vision-rich and -only, marking more question information from texts to
+diagrams. Comparing the results of different versions, SciVerse systematically
+examines the profes","The rapid advancement of Large Multi-modal Models (LMMs) has enabled their
+application in scientific problem-solving, yet their fine-grained capabilities
+remain under-explored. In this paper, we introduce SciVerse, a multi-modal
+scientific evaluation benchmark to thoroughly assess LMMs across 5,735 test
+instances in five distinct versions. We aim to investigate three key dimensions
+of LMMs: scientific knowledge comprehension, multi-modal content
+interpretation, and Chain-of-Thought (CoT) reasoning. To unveil whether LMMs
+possess sufficient scientific expertise, we first transform each problem into"
+Summarize the paper: NIL: No-data Imitation Learning by Leveraging Pre-trained Video Diffusion Models,"Acquiring physically plausible motor skills across diverse and unconventional
+morphologies-including humanoid robots, quadrupeds, and animals-is essential
+for advancing character simulation and robotics. Traditional methods, such as
+reinforcement learning (RL) are task- and body-specific, require extensive
+reward function engineering, and do not generalize well. Imitation learning
+offers an alternative but relies heavily on high-quality expert demonstrations,
+which are difficult to obtain for non-human morphologies. Video diffusion
+models, on the other hand, are capable of generating realistic videos of
+various morphologies, from humans to ants. Leveraging this capability, we
+propose a data-independent approach for skill acquisition that learns 3D motor
+skills from 2D-generated videos, with generalization capability to
+unconventional and non-human forms. Specifically, we guide the imitation
+learning process by leveraging vision transformers for video-based comparisons
+by calculating pa","Acquiring physically plausible motor skills across diverse and unconventional
+morphologies-including humanoid robots, quadrupeds, and animals-is essential
+for advancing character simulation and robotics. Traditional methods, such as
+reinforcement learning (RL) are task- and body-specific, require extensive
+reward function engineering, and do not generalize well. Imitation learning
+offers an alternative but relies heavily on high-quality expert demonstrations,
+which are difficult to obtain for non-human morphologies. Video diffusion
+models, on the other hand, are capable of generating realistic videos of
+various morphologies, from humans to ants."
+Summarize the paper: LHM: Large Animatable Human Reconstruction Model from a Single Image in Seconds,"Animatable 3D human reconstruction from a single image is a challenging
+problem due to the ambiguity in decoupling geometry, appearance, and
+deformation. Recent advances in 3D human reconstruction mainly focus on static
+human modeling, and the reliance of using synthetic 3D scans for training
+limits their generalization ability. Conversely, optimization-based video
+methods achieve higher fidelity but demand controlled capture conditions and
+computationally intensive refinement processes. Motivated by the emergence of
+large reconstruction models for efficient static reconstruction, we propose LHM
+(Large Animatable Human Reconstruction Model) to infer high-fidelity avatars
+represented as 3D Gaussian splatting in a feed-forward pass. Our model
+leverages a multimodal transformer architecture to effectively encode the human
+body positional features and image features with attention mechanism, enabling
+detailed preservation of clothing geometry and texture. To further boost the
+face identity","Animatable 3D human reconstruction from a single image is a challenging
+problem due to the ambiguity in decoupling geometry, appearance, and
+deformation. Recent advances in 3D human reconstruction mainly focus on static
+human modeling, and the reliance of using synthetic 3D scans for training
+limits their generalization ability. Conversely, optimization-based video
+methods achieve higher fidelity but demand controlled capture conditions and
+computationally intensive refinement processes. Motivated by the emergence of
+large reconstruction models for efficient static reconstruction, we propose LHM
+(Large Animatable Human Reconstruction Model) to"
+Summarize the paper: ETCH: Generalizing Body Fitting to Clothed Humans via Equivariant Tightness,"Fitting a body to a 3D clothed human point cloud is a common yet challenging
+task. Traditional optimization-based approaches use multi-stage pipelines that
+are sensitive to pose initialization, while recent learning-based methods often
+struggle with generalization across diverse poses and garment types. We propose
+Equivariant Tightness Fitting for Clothed Humans, or ETCH, a novel pipeline
+that estimates cloth-to-body surface mapping through locally approximate SE(3)
+equivariance, encoding tightness as displacement vectors from the cloth surface
+to the underlying body. Following this mapping, pose-invariant body features
+regress sparse body markers, simplifying clothed human fitting into an
+inner-body marker fitting task. Extensive experiments on CAPE and 4D-Dress show
+that ETCH significantly outperforms state-of-the-art methods -- both
+tightness-agnostic and tightness-aware -- in body fitting accuracy on loose
+clothing (16.7% ~ 69.5%) and shape accuracy (average 49.9%). Our equivariant","Fitting a body to a 3D clothed human point cloud is a common yet challenging
+task. Traditional optimization-based approaches use multi-stage pipelines that
+are sensitive to pose initialization, while recent learning-based methods often
+struggle with generalization across diverse poses and garment types. We propose
+Equivariant Tightness Fitting for Clothed Humans, or ETCH, a novel pipeline
+that estimates cloth-to-body surface mapping through locally approximate SE(3)
+equivariance, encoding tightness as displacement vectors from the cloth surface
+to the underlying body. Following this mapping, pose-invariant body features
+regress sparse body markers, simpl"
+Summarize the paper: Transformers without Normalization,"Normalization layers are ubiquitous in modern neural networks and have long
+been considered essential. This work demonstrates that Transformers without
+normalization can achieve the same or better performance using a remarkably
+simple technique. We introduce Dynamic Tanh (DyT), an element-wise operation
+$DyT($x$) = \tanh(\alpha $x$)$, as a drop-in replacement for normalization
+layers in Transformers. DyT is inspired by the observation that layer
+normalization in Transformers often produces tanh-like, $S$-shaped input-output
+mappings. By incorporating DyT, Transformers without normalization can match or
+exceed the performance of their normalized counterparts, mostly without
+hyperparameter tuning. We validate the effectiveness of Transformers with DyT
+across diverse settings, ranging from recognition to generation, supervised to
+self-supervised learning, and computer vision to language models. These
+findings challenge the conventional understanding that normalization layers are
+indispens","Normalization layers are ubiquitous in modern neural networks and have long
+been considered essential. This work demonstrates that Transformers without
+normalization can achieve the same or better performance using a remarkably
+simple technique. We introduce Dynamic Tanh (DyT), an element-wise operation
+$DyT($x$) = \tanh(\alpha $x$)$, as a drop-in replacement for normalization
+layers in Transformers. DyT is inspired by the observation that layer
+normalization in Transformers often produces tanh-like, $S$-shaped input-output
+mappings. By incorporating DyT, Transformers without normalization can match or
+ex"
+Summarize the paper: Siege: Autonomous Multi-Turn Jailbreaking of Large Language Models with Tree Search,"We introduce Siege, a multi-turn adversarial framework that models the
+gradual erosion of Large Language Model (LLM) safety through a tree search
+perspective. Unlike single-turn jailbreaks that rely on one meticulously
+engineered prompt, Siege expands the conversation at each turn in a
+breadth-first fashion, branching out multiple adversarial prompts that exploit
+partial compliance from previous responses. By tracking these incremental
+policy leaks and re-injecting them into subsequent queries, Siege reveals how
+minor concessions can accumulate into fully disallowed outputs. Evaluations on
+the JailbreakBench dataset show that Siege achieves a 100% success rate on
+GPT-3.5-turbo and 97% on GPT-4 in a single multi-turn run, using fewer queries
+than baselines such as Crescendo or GOAT. This tree search methodology offers
+an in-depth view of how model safeguards degrade over successive dialogue
+turns, underscoring the urgency of robust multi-turn testing procedures for
+language models.","We introduce Siege, a multi-turn adversarial framework that models the
+gradual erosion of Large Language Model (LLM) safety through a tree search
+perspective. Unlike single-turn jailbreaks that rely on one meticulously
+engineered prompt, Siege expands the conversation at each turn in a
+breadth-first fashion, branching out multiple adversarial prompts that exploit
+partial compliance from previous responses. By tracking these incremental
+policy leaks and re-injecting them into subsequent queries, Siege reveals how
+minor concessions can accumulate into fully disallowed outputs. Evaluations on
+the JailbreakBench dataset"
+Summarize the paper: Compositional Subspace Representation Fine-tuning for Adaptive Large Language Models,"Adapting large language models to multiple tasks can cause cross-skill
+interference, where improvements for one skill degrade another. While methods
+such as LoRA impose orthogonality constraints at the weight level, they do not
+fully address interference in hidden-state representations. We propose
+Compositional Subspace Representation Fine-tuning (CS-ReFT), a novel
+representation-based approach that learns multiple orthonormal subspace
+transformations, each specializing in a distinct skill, and composes them via a
+lightweight router. By isolating these subspace edits in the hidden state,
+rather than weight matrices, CS-ReFT prevents cross-task conflicts more
+effectively. On the AlpacaEval benchmark, applying CS-ReFT to Llama-2-7B
+achieves a 93.94% win rate, surpassing GPT-3.5 Turbo (86.30%) while requiring
+only 0.0098% of model parameters. These findings show that specialized
+representation edits, composed via a simple router, significantly enhance
+multi-task instruction following with","Adapting large language models to multiple tasks can cause cross-skill
+interference, where improvements for one skill degrade another. While methods
+such as LoRA impose orthogonality constraints at the weight level, they do not
+fully address interference in hidden-state representations. We propose
+Compositional Subspace Representation Fine-tuning (CS-ReFT), a novel
+representation-based approach that learns multiple orthonormal subspace
+transformations, each specializing in a distinct skill, and composes them via a
+lightweight router. By isolating these subspace edits in the hidden state,
+rather than weight matrices, CS-ReFT prevents cross-"
+Summarize the paper: Dual-Stage Cross-Modal Network with Dynamic Feature Fusion for Emotional Mimicry Intensity Estimation,"Emotional Mimicry Intensity (EMI) estimation serves as a critical technology
+for understanding human social behavior and enhancing human-computer
+interaction experiences, where the core challenge lies in dynamic correlation
+modeling and robust fusion of multimodal temporal signals. To address the
+limitations of existing methods in insufficient exploitation of modal
+synergistic effects, noise sensitivity, and limited fine-grained alignment
+capabilities, this paper proposes a dual-stage cross-modal alignment framework.
+First, we construct vision-text and audio-text contrastive learning networks
+based on an improved CLIP architecture, achieving preliminary alignment in the
+feature space through modality-decoupled pre-training. Subsequently, we design
+a temporal-aware dynamic fusion module that combines Temporal Convolutional
+Networks (TCN) and gated bidirectional LSTM to respectively capture the
+macro-evolution patterns of facial expressions and local dynamics of acoustic
+features. Innova","Emotional Mimicry Intensity (EMI) estimation serves as a critical technology
+for understanding human social behavior and enhancing human-computer
+interaction experiences, where the core challenge lies in dynamic correlation
+modeling and robust fusion of multimodal temporal signals. To address the
+limitations of existing methods in insufficient exploitation of modal
+synergistic effects, noise sensitivity, and limited fine-grained alignment
+capabilities, this paper proposes a dual-stage cross-modal alignment framework.
+First, we construct vision-text and audio-text contrastive learning networks
+based on an improved CLIP architecture, achieving preliminary alignment in the
+feature space"
+Summarize the paper: TruthPrInt: Mitigating LVLM Object Hallucination Via Latent Truthful-Guided Pre-Intervention,"Object Hallucination (OH) has been acknowledged as one of the major
+trustworthy challenges in Large Vision-Language Models (LVLMs). Recent
+advancements in Large Language Models (LLMs) indicate that internal states,
+such as hidden states, encode the ""overall truthfulness"" of generated
+responses. However, it remains under-explored how internal states in LVLMs
+function and whether they could serve as ""per-token"" hallucination indicators,
+which is essential for mitigating OH. In this paper, we first conduct an
+in-depth exploration of LVLM internal states in relation to OH issues and
+discover that (1) LVLM internal states are high-specificity per-token
+indicators of hallucination behaviors. Moreover, (2) different LVLMs encode
+universal patterns of hallucinations in common latent subspaces, indicating
+that there exist ""generic truthful directions"" shared by various LVLMs. Based
+on these discoveries, we propose Truthful-Guided Pre-Intervention (TruthPrInt)
+that first learns the truthful dire","Object Hallucination (OH) has been acknowledged as one of the major
+trustworthy challenges in Large Vision-Language Models (LVLMs). Recent
+advancements in Large Language Models (LLMs) indicate that internal states,
+such as hidden states, encode the ""overall truthfulness"" of generated
+responses. However, it remains under-explored how internal states in LVLMs
+function and whether they could serve as ""per-token"" hallucination indicators,
+which is essential for mitigating OH. In this paper, we first conduct an
+in-depth exploration of LVLM internal states in"
+Summarize the paper: The Spectral Bias of Shallow Neural Network Learning is Shaped by the Choice of Non-linearity,"Despite classical statistical theory predicting severe overfitting, modern
+massively overparameterized neural networks still generalize well. This
+unexpected property is attributed to the network's so-called implicit bias,
+which describes its propensity to converge to solutions that generalize
+effectively, among the many possible that correctly label the training data.
+The aim of our research is to explore this bias from a new perspective,
+focusing on how non-linear activation functions contribute to shaping it.
+First, we introduce a reparameterization which removes a continuous weight
+rescaling symmetry. Second, in the kernel regime, we leverage this
+reparameterization to generalize recent findings that relate shallow Neural
+Networks to the Radon transform, deriving an explicit formula for the implicit
+bias induced by a broad class of activation functions. Specifically, by
+utilizing the connection between the Radon transform and the Fourier transform,
+we interpret the kernel regime's ","Despite classical statistical theory predicting severe overfitting, modern
+massively overparameterized neural networks still generalize well. This
+unexpected property is attributed to the network's so-called implicit bias,
+which describes its propensity to converge to solutions that generalize
+effectively, among the many possible that correctly label the training data.
+The aim of our research is to explore this bias from a new perspective,
+focusing on how non-linear activation functions contribute to shaping it.
+First, we introduce a reparameterization which removes a continuous weight
+rescaling symmetry. Second, in the kernel regime, we leverage this
+reparameterization to generalize recent findings"
+Summarize the paper: VisualWebInstruct: Scaling up Multimodal Instruction Data through Web Search,"Vision-Language Models have made significant progress on many
+perception-focused tasks, however, their progress on reasoning-focused tasks
+seem to be limited due to the lack of high-quality and diverse training data.
+In this work, we aim to address the scarcity issue of reasoning-focused
+multimodal datasets. We propose VisualWebInstruct - a novel approach that
+leverages search engine to create a diverse, and high-quality dataset spanning
+multiple disciplines like math, physics, finance, chemistry, etc. Starting with
+meticulously selected 30,000 seed images, we employ Google Image search to
+identify websites containing similar images. We collect and process the HTMLs
+from over 700K unique URL sources. Through a pipeline of content extraction,
+filtering and synthesis, we build a dataset of approximately 900K
+question-answer pairs, with 40% being visual QA pairs and the rest as text QA
+pairs. Models fine-tuned on VisualWebInstruct demonstrate significant
+performance gains: (1) training fr","Vision-Language Models have made significant progress on many
+perception-focused tasks, however, their progress on reasoning-focused tasks
+seem to be limited due to the lack of high-quality and diverse training data.
+In this work, we aim to address the scarcity issue of reasoning-focused
+multimodal datasets. We propose VisualWebInstruct - a novel approach that
+leverages search engine to create a diverse, and high-quality dataset spanning
+multiple disciplines like math, physics, finance, chemistry, etc. Starting with
+meticulously selected 30,000 seed images, we employ Google Image search to
+identify"
+Summarize the paper: KUDA: Keypoints to Unify Dynamics Learning and Visual Prompting for Open-Vocabulary Robotic Manipulation,"With the rapid advancement of large language models (LLMs) and
+vision-language models (VLMs), significant progress has been made in developing
+open-vocabulary robotic manipulation systems. However, many existing approaches
+overlook the importance of object dynamics, limiting their applicability to
+more complex, dynamic tasks. In this work, we introduce KUDA, an
+open-vocabulary manipulation system that integrates dynamics learning and
+visual prompting through keypoints, leveraging both VLMs and learning-based
+neural dynamics models. Our key insight is that a keypoint-based target
+specification is simultaneously interpretable by VLMs and can be efficiently
+translated into cost functions for model-based planning. Given language
+instructions and visual observations, KUDA first assigns keypoints to the RGB
+image and queries the VLM to generate target specifications. These abstract
+keypoint-based representations are then converted into cost functions, which
+are optimized using a learned dyna","With the rapid advancement of large language models (LLMs) and
+vision-language models (VLMs), significant progress has been made in developing
+open-vocabulary robotic manipulation systems. However, many existing approaches
+overlook the importance of object dynamics, limiting their applicability to
+more complex, dynamic tasks. In this work, we introduce KUDA, an
+open-vocabulary manipulation system that integrates dynamics learning and
+visual prompting through keypoints, leveraging both VLMs and learning-based
+neural dynamics models. Our key insight is that a keypoint-based target
+specification is simultaneously interpretable by VLMs and can"
+"Summarize the paper: Language Models, Graph Searching, and Supervision Adulteration: When More Supervision is Less and How to Make More More","This work concerns the path-star task, a minimal example of searching over a
+graph. The graph, $G$, is star-shaped with $D$ arms radiating from a start
+node, $s$. A language model (LM) is given $G$, $s$, and a target node $t$,
+which ends one of the arms and is tasked with generating the arm containing
+$t$. The minimal nature of this task means only a single choice needs to be
+made: which of the $D$ arms contains $t$?
+  Decoder-only LMs fail to solve this elementary task above $1/D$ chance due to
+a learned shortcut that absorbs training supervision. We show how this
+pathology is caused by excess supervision and we present a series of solutions
+demonstrating that the task is solvable via decoder-only LMs. We find that the
+task's minimal nature causes its difficulty, as it prevents task decomposition.
+Our solutions provide insight into the pathology and its implications for LMs
+trained via next-token prediction.","This work concerns the path-star task, a minimal example of searching over a
+graph. The graph, $G$, is star-shaped with $D$ arms radiating from a start
+node, $s$. A language model (LM) is given $G$, $s$, and a target node $t$,
+which ends one of the arms and is tasked with generating the arm containing
+$t$. The minimal nature of this task means only a single choice needs to be
+made: which of the $D$ arms contains $t$?
+  Decoder-only LMs fail to solve this elementary task above $1/D$ chance due to
+a learned shortcut that absorbs training supervision"
+Summarize the paper: GBSVR: Granular Ball Support Vector Regression,"Support Vector Regression (SVR) and its variants are widely used to handle
+regression tasks, however, since their solution involves solving an expensive
+quadratic programming problem, it limits its application, especially when
+dealing with large datasets. Additionally, SVR uses an epsilon-insensitive loss
+function which is sensitive to outliers and therefore can adversely affect its
+performance. We propose Granular Ball Support Vector Regression (GBSVR) to
+tackle problem of regression by using granular ball concept. These balls are
+useful in simplifying complex data spaces for machine learning tasks, however,
+to the best of our knowledge, they have not been sufficiently explored for
+regression problems. Granular balls group the data points into balls based on
+their proximity and reduce the computational cost in SVR by replacing the large
+number of data points with far fewer granular balls. This work also suggests a
+discretization method for continuous-valued attributes to facilitate th","Support Vector Regression (SVR) and its variants are widely used to handle
+regression tasks, however, since their solution involves solving an expensive
+quadratic programming problem, it limits its application, especially when
+dealing with large datasets. Additionally, SVR uses an epsilon-insensitive loss
+function which is sensitive to outliers and therefore can adversely affect its
+performance. We propose Granular Ball Support Vector Regression (GBSVR) to
+tackle problem of regression by using granular ball concept. These balls are
+useful in simplifying complex data spaces for machine learning tasks, however,
+to the best of our knowledge, they have not been sufficiently explored for
+re"
+Summarize the paper: The Impact of Item-Writing Flaws on Difficulty and Discrimination in Item Response Theory,"High-quality test items are essential for educational assessments,
+particularly within Item Response Theory (IRT). Traditional validation methods
+rely on resource-intensive pilot testing to estimate item difficulty and
+discrimination. More recently, Item-Writing Flaw (IWF) rubrics emerged as a
+domain-general approach for evaluating test items based on textual features.
+However, their relationship to IRT parameters remains underexplored. To address
+this gap, we conducted a study involving over 7,000 multiple-choice questions
+across various STEM subjects (e.g., math and biology). Using an automated
+approach, we annotated each question with a 19-criteria IWF rubric and studied
+relationships to data-driven IRT parameters. Our analysis revealed
+statistically significant links between the number of IWFs and IRT difficulty
+and discrimination parameters, particularly in life and physical science
+domains. We further observed how specific IWF criteria can impact item quality
+more and less severe","High-quality test items are essential for educational assessments,
+particularly within Item Response Theory (IRT). Traditional validation methods
+rely on resource-intensive pilot testing to estimate item difficulty and
+discrimination. More recently, Item-Writing Flaw (IWF) rubrics emerged as a
+domain-general approach for evaluating test items based on textual features.
+However, their relationship to IRT parameters remains underexplored. To address
+this gap, we conducted a study involving over 7,000 multiple-choice questions
+across various STEM subjects (e.g., math and biology). Using an automated
+approach,"
+Summarize the paper: Lightweight Models for Emotional Analysis in Video,"In this study, we present an approach for efficient spatiotemporal feature
+extraction using MobileNetV4 and a multi-scale 3D MLP-Mixer-based temporal
+aggregation module. MobileNetV4, with its Universal Inverted Bottleneck (UIB)
+blocks, serves as the backbone for extracting hierarchical feature
+representations from input image sequences, ensuring both computational
+efficiency and rich semantic encoding. To capture temporal dependencies, we
+introduce a three-level MLP-Mixer module, which processes spatial features at
+multiple resolutions while maintaining structural integrity. Experimental
+results on the ABAW 8th competition demonstrate the effectiveness of our
+approach, showing promising performance in affective behavior analysis. By
+integrating an efficient vision backbone with a structured temporal modeling
+mechanism, the proposed framework achieves a balance between computational
+efficiency and predictive accuracy, making it well-suited for real-time
+applications in mobile and embedd","In this study, we present an approach for efficient spatiotemporal feature
+extraction using MobileNetV4 and a multi-scale 3D MLP-Mixer-based temporal
+aggregation module. MobileNetV4, with its Universal Inverted Bottleneck (UIB)
+blocks, serves as the backbone for extracting hierarchical feature
+representations from input image sequences, ensuring both computational
+efficiency and rich semantic encoding. To capture temporal dependencies, we
+introduce a three-level MLP-Mixer module, which processes spatial features at
+multiple resolutions while maintaining structural integrity. Experimental
+results on the A"
+Summarize the paper: PiSA: A Self-Augmented Data Engine and Training Strategy for 3D Understanding with Large Models,"3D Multimodal Large Language Models (MLLMs) have recently made substantial
+advancements. However, their potential remains untapped, primarily due to the
+limited quantity and suboptimal quality of 3D datasets. Current approaches
+attempt to transfer knowledge from 2D MLLMs to expand 3D instruction data, but
+still face modality and domain gaps. To this end, we introduce PiSA-Engine
+(Point-Self-Augmented-Engine), a new framework for generating instruction
+point-language datasets enriched with 3D spatial semantics. We observe that
+existing 3D MLLMs offer a comprehensive understanding of point clouds for
+annotation, while 2D MLLMs excel at cross-validation by providing complementary
+information. By integrating holistic 2D and 3D insights from off-the-shelf
+MLLMs, PiSA-Engine enables a continuous cycle of high-quality data generation.
+We select PointLLM as the baseline and adopt this co-evolution training
+framework to develop an enhanced 3D MLLM, termed PointLLM-PiSA. Additionally,
+we identif","3D Multimodal Large Language Models (MLLMs) have recently made substantial
+advancements. However, their potential remains untapped, primarily due to the
+limited quantity and suboptimal quality of 3D datasets. Current approaches
+attempt to transfer knowledge from 2D MLLMs to expand 3D instruction data, but
+still face modality and domain gaps. To this end, we introduce PiSA-Engine
+(Point-Self-Augmented-Engine), a new framework for generating instruction
+point-language datasets enriched with 3D spatial semantics. We observe that
+existing 3D MLLMs offer a compreh"
+Summarize the paper: CountPath: Automating Fragment Counting in Digital Pathology,"Quality control of medical images is a critical component of digital
+pathology, ensuring that diagnostic images meet required standards. A
+pre-analytical task within this process is the verification of the number of
+specimen fragments, a process that ensures that the number of fragments on a
+slide matches the number documented in the macroscopic report. This step is
+important to ensure that the slides contain the appropriate diagnostic material
+from the grossing process, thereby guaranteeing the accuracy of subsequent
+microscopic examination and diagnosis. Traditionally, this assessment is
+performed manually, requiring significant time and effort while being subject
+to significant variability due to its subjective nature. To address these
+challenges, this study explores an automated approach to fragment counting
+using the YOLOv9 and Vision Transformer models. Our results demonstrate that
+the automated system achieves a level of performance comparable to expert
+assessments, offering a r","Quality control of medical images is a critical component of digital
+pathology, ensuring that diagnostic images meet required standards. A
+pre-analytical task within this process is the verification of the number of
+specimen fragments, a process that ensures that the number of fragments on a
+slide matches the number documented in the macroscopic report. This step is
+important to ensure that the slides contain the appropriate diagnostic material
+from the grossing process, thereby guaranteeing the accuracy of subsequent
+microscopic examination and diagnosis. Traditionally, this assessment is
+performed manually, requiring significant time and effort while being subject
+to significant variability due to its subjective nature."
+Summarize the paper: Why the Brain Cannot Be a Digital Computer: History-Dependence and the Computational Limits of Consciousness,"This paper presents a novel information-theoretic proof demonstrating that
+the human brain as currently understood cannot function as a classical digital
+computer. Through systematic quantification of distinguishable conscious states
+and their historical dependencies, we establish that the minimum information
+required to specify a conscious state exceeds the physical information capacity
+of the human brain by a significant factor. Our analysis calculates the
+bit-length requirements for representing consciously distinguishable sensory
+""stimulus frames"" and demonstrates that consciousness exhibits mandatory
+temporal-historical dependencies that multiply these requirements beyond the
+brain's storage capabilities. This mathematical approach offers new insights
+into the fundamental limitations of computational models of consciousness and
+suggests that non-classical information processing mechanisms may be necessary
+to account for conscious experience.","This paper presents a novel information-theoretic proof demonstrating that
+the human brain as currently understood cannot function as a classical digital
+computer. Through systematic quantification of distinguishable conscious states
+and their historical dependencies, we establish that the minimum information
+required to specify a conscious state exceeds the physical information capacity
+of the human brain by a significant factor. Our analysis calculates the
+bit-length requirements for representing consciously distinguishable sensory
+""stimulus frames"" and demonstrates that consciousness exhibits mandatory
+temporal-historical dependencies that multiply these requirements beyond the
+brain's storage capabilities. This mathematical approach offers new insights
+into the fundamental limitations of computational models"
+Summarize the paper: Conformal Prediction Sets for Deep Generative Models via Reduction to Conformal Regression,"We consider the problem of generating valid and small prediction sets by
+sampling outputs (e.g., software code and natural language text) from a
+black-box deep generative model for a given input (e.g., textual prompt). The
+validity of a prediction set is determined by a user-defined binary
+admissibility function depending on the target application. For example,
+requiring at least one program in the set to pass all test cases in code
+generation application. To address this problem, we develop a simple and
+effective conformal inference algorithm referred to as Generative Prediction
+Sets (GPS). Given a set of calibration examples and black-box access to a deep
+generative model, GPS can generate prediction sets with provable guarantees.
+The key insight behind GPS is to exploit the inherent structure within the
+distribution over the minimum number of samples needed to obtain an admissible
+output to develop a simple conformal regression approach over the minimum
+number of samples. Experiment","We consider the problem of generating valid and small prediction sets by
+sampling outputs (e.g., software code and natural language text) from a
+black-box deep generative model for a given input (e.g., textual prompt). The
+validity of a prediction set is determined by a user-defined binary
+admissibility function depending on the target application. For example,
+requiring at least one program in the set to pass all test cases in code
+generation application. To address this problem, we develop a simple and
+effective conformal inference algorithm referred to as Generative Prediction
+Sets (GPS). Given a set of calibration examples and black-box access to a"
+Summarize the paper: Explainable Bayesian deep learning through input-skip Latent Binary Bayesian Neural Networks,"Modeling natural phenomena with artificial neural networks (ANNs) often
+provides highly accurate predictions. However, ANNs often suffer from
+over-parameterization, complicating interpretation and raising uncertainty
+issues. Bayesian neural networks (BNNs) address the latter by representing
+weights as probability distributions, allowing for predictive uncertainty
+evaluation. Latent binary Bayesian neural networks (LBBNNs) further handle
+structural uncertainty and sparsify models by removing redundant weights. This
+article advances LBBNNs by enabling covariates to skip to any succeeding layer
+or be excluded, simplifying networks and clarifying input impacts on
+predictions. Ultimately, a linear model or even a constant can be found to be
+optimal for a specific problem at hand. Furthermore, the input-skip LBBNN
+approach reduces network density significantly compared to standard LBBNNs,
+achieving over 99% reduction for small networks and over 99.9% for larger ones,
+while still maintaining ","Modeling natural phenomena with artificial neural networks (ANNs) often
+provides highly accurate predictions. However, ANNs often suffer from
+over-parameterization, complicating interpretation and raising uncertainty
+issues. Bayesian neural networks (BNNs) address the latter by representing
+weights as probability distributions, allowing for predictive uncertainty
+evaluation. Latent binary Bayesian neural networks (LBBNNs) further handle
+structural uncertainty and sparsify models by removing redundant weights. This
+article advances LBBNNs by enabling covariates to skip to any succeeding layer
+or be excluded, simplifying networks and clarifying input impacts on
+predictions. Ultimately"
+Summarize the paper: CODEI: Resource-Efficient Task-Driven Co-Design of Perception and Decision Making for Mobile Robots Applied to Autonomous Vehicles,"This paper discusses the integration challenges and strategies for designing
+mobile robots, by focusing on the task-driven, optimal selection of hardware
+and software to balance safety, efficiency, and minimal usage of resources such
+as costs, energy, computational requirements, and weight. We emphasize the
+interplay between perception and motion planning in decision-making by
+introducing the concept of occupancy queries to quantify the perception
+requirements for sampling-based motion planners. Sensor and algorithm
+performance are evaluated using False Negative Rates (FPR) and False Positive
+Rates (FPR) across various factors such as geometric relationships, object
+properties, sensor resolution, and environmental conditions. By integrating
+perception requirements with perception performance, an Integer Linear
+Programming (ILP) approach is proposed for efficient sensor and algorithm
+selection and placement. This forms the basis for a co-design optimization that
+includes the robot body,","This paper discusses the integration challenges and strategies for designing
+mobile robots, by focusing on the task-driven, optimal selection of hardware
+and software to balance safety, efficiency, and minimal usage of resources such
+as costs, energy, computational requirements, and weight. We emphasize the
+interplay between perception and motion planning in decision-making by
+introducing the concept of occupancy queries to quantify the perception
+requirements for sampling-based motion planners. Sensor and algorithm
+performance are evaluated using False Negative Rates (FPR) and False Positive
+Rates (FPR) across various factors such as geometric relationships, object
+properties, sensor"
+Summarize the paper: Efficient Implementation of CRYSTALS-KYBER Key Encapsulation Mechanism on ESP32,"Kyber, an IND-CCA2-secure lattice-based post-quantum key-encapsulation
+mechanism, is the winner of the first post-quantum cryptography standardization
+process of the US National Institute of Standards and Technology. In this work,
+we provide an efficient implementation of Kyber on ESP32, a very popular
+microcontroller for Internet of Things applications. We hand-partition the
+Kyber algorithm to enable utilization of the ESP32 dual-core architecture,
+which allows us to speed up its execution by 1.21x (keygen), 1.22x (encaps) and
+1.20x (decaps). We also explore the possibility of gaining further improvement
+by utilizing the ESP32 SHA and AES coprocessor and achieve a culminated
+speed-up of 1.72x (keygen), 1.84x (encaps) and 1.69x (decaps).","Kyber, an IND-CCA2-secure lattice-based post-quantum key-encapsulation
+mechanism, is the winner of the first post-quantum cryptography standardization
+process of the US National Institute of Standards and Technology. In this work,
+we provide an efficient implementation of Kyber on ESP32, a very popular
+microcontroller for Internet of Things applications. We hand-partition the
+Kyber algorithm to enable utilization of the ESP32 dual-core architecture,
+which allows us to speed up its execution by 1.21x (keygen), 1.22x (encaps) and
+1.20x"
+Summarize the paper: Faster Inference of LLMs using FP8 on the Intel Gaudi,"Low-precision data types are essential in modern neural networks during both
+training and inference as they enhance throughput and computational capacity by
+better exploiting available hardware resources. Despite the incorporation of
+FP8 in commercially available neural network accelerators, a comprehensive
+exposition of its underlying mechanisms, along with rigorous performance and
+accuracy evaluations, is still lacking. In this work, we contribute in three
+significant ways. First, we analyze the implementation details and quantization
+options associated with FP8 for inference on the Intel Gaudi AI accelerator.
+Second, we empirically quantify the throughput improvements afforded by the use
+of FP8 at both the operator level and in end-to-end scenarios. Third, we assess
+the accuracy impact of various FP8 quantization methods. Our experimental
+results indicate that the Intel Gaudi 2 accelerator consistently achieves high
+computational unit utilization, frequently exceeding 90\% MFU, whil","Low-precision data types are essential in modern neural networks during both
+training and inference as they enhance throughput and computational capacity by
+better exploiting available hardware resources. Despite the incorporation of
+FP8 in commercially available neural network accelerators, a comprehensive
+exposition of its underlying mechanisms, along with rigorous performance and
+accuracy evaluations, is still lacking. In this work, we contribute in three
+significant ways. First, we analyze the implementation details and quantization
+options associated with FP8 for inference on the Intel Gaudi AI accelerator.
+Second, we empirically quantify the throughput improvements afforded by the use
+of FP"
+Summarize the paper: Hardware-Compatible Single-Shot Feasible-Space Heuristics for Solving the Quadratic Assignment Problem,"Research into the development of special-purpose computing architectures
+designed to solve quadratic unconstrained binary optimization (QUBO) problems
+has flourished in recent years. It has been demonstrated in the literature that
+such special-purpose solvers can outperform traditional CMOS architectures by
+orders of magnitude with respect to timing metrics on synthetic problems.
+However, they face challenges with constrained problems such as the quadratic
+assignment problem (QAP), where mapping to binary formulations such as QUBO
+introduces overhead and limits parallelism. In-memory computing (IMC) devices,
+such as memristor-based analog Ising machines, offer significant speedups and
+efficiency gains over traditional CPU-based solvers, particularly for solving
+combinatorial optimization problems. In this work, we present a novel local
+search heuristic designed for IMC hardware to tackle the QAP. Our approach
+enables massive parallelism that allows for computing of full neighbourhoods
+","Research into the development of special-purpose computing architectures
+designed to solve quadratic unconstrained binary optimization (QUBO) problems
+has flourished in recent years. It has been demonstrated in the literature that
+such special-purpose solvers can outperform traditional CMOS architectures by
+orders of magnitude with respect to timing metrics on synthetic problems.
+However, they face challenges with constrained problems such as the quadratic
+assignment problem (QAP), where mapping to binary formulations such as QUBO
+introduces overhead and limits parallelism. In-memory computing (IMC) devices,
+such as memristor-based analog Ising machines, offer significant spe"
+Summarize the paper: Hardware.jl - An MLIR-based Julia HLS Flow (Work in Progress),"Co-developing scientific algorithms and hardware accelerators requires
+domain-specific knowledge and large engineering resources. This leads to a slow
+development pace and high project complexity, which creates a barrier to entry
+that is too high for the majority of developers to overcome. We are developing
+a reusable end-to-end compiler toolchain for the Julia language entirely built
+on permissively-licensed open-source projects. This unifies accelerator and
+algorithm development by automatically synthesising Julia source code into
+high-performance Verilog.","Co-developing scientific algorithms and hardware accelerators requires
+domain-specific knowledge and large engineering resources. This leads to a slow
+development pace and high project complexity, which creates a barrier to entry
+that is too high for the majority of developers to overcome. We are developing
+a reusable end-to-end compiler toolchain for the Julia language entirely built
+on permissively-licensed open-source projects. This unifies accelerator and
+algorithm development by automatically synthesising Julia source code into
+high-performance Verilog. ## https://arxiv.org/abs/unknown Summarize the paper: Hardware.jl - An MLIR-based Julia HLS Flow ("
+Summarize the paper: FpgaHub: Fpga-centric Hyper-heterogeneous Computing Platform for Big Data Analytics,"Modern data analytics requires a huge amount of computing power and processes
+a massive amount of data. At the same time, the underlying computing platform
+is becoming much more heterogeneous on both hardware and software. Even though
+specialized hardware, e.g., FPGA- or GPU- or TPU-based systems, often achieves
+better performance than a CPU-only system due to the slowing of Moore's law,
+such systems are limited in what they can do. For example, GPU-only approaches
+suffer from severe IO limitations. To truly exploit the potential of hardware
+heterogeneity, we present FpgaHub, an FPGA-centric hyper-heterogeneous
+computing platform for big data analytics. The key idea of FpgaHub is to use
+reconfigurable computing to implement a versatile hub complementing other
+processors (CPUs, GPUs, DPUs, programmable switches, computational storage,
+etc.). Using an FPGA as the basis, we can take advantage of its highly
+reconfigurable nature and rich IO interfaces such as PCIe, networking, and
+on-board","Modern data analytics requires a huge amount of computing power and processes
+a massive amount of data. At the same time, the underlying computing platform
+is becoming much more heterogeneous on both hardware and software. Even though
+specialized hardware, e.g., FPGA- or GPU- or TPU-based systems, often achieves
+better performance than a CPU-only system due to the slowing of Moore's law,
+such systems are limited in what they can do. For example, GPU-only approaches
+suffer from severe IO limitations. To truly exploit the potential of hardware
+heterogeneity, we present FpgaHub, an FPGA-centric hyper-h"
