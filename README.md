@@ -338,6 +338,28 @@ The structure of the dataset (just focus on ours)：
 
 
 
+# Run Evaluation
+```python
+python rouge_eval.py conf/eval2.yaml
+```
+Results:
+```yaml
+ROUGE evaluation results:
+rouge1_precision: 0.9920
+rouge1_recall: 0.5321
+rouge1_fmeasure: 0.6800
+rouge2_precision: 0.9915
+rouge2_recall: 0.5294
+rouge2_fmeasure: 0.6774
+rougeL_precision: 0.9920
+rougeL_recall: 0.5321
+rougeL_fmeasure: 0.6800
+Detailed results saved to: /root/autodl-tmp/intrinsic-source-citation/outputs/experiments/arxiv-citation-doc-id-begin/evaluation_results/detailed_rouge_results.csv
+Summary results saved to: /root/autodl-tmp/intrinsic-source-citation/outputs/experiments/arxiv-citation-doc-id-begin/evaluation_results/rouge_summary.csv
+```
+
+
+
 #### One-script-for-all
 To eliminate the need to run many consecutive scripts, I designed the code such that a single script will do everything. Specifically, `run_experiment.py` will take as input a configuration file (more on that later) and will: 
 1. Perform data augmentation if necessary (by shuffling facts within the document as described in the paper)
